@@ -7,6 +7,9 @@ GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
 </div>
 </div>
 
+<div align="center">
+[![Hugging Face Collection](https://img.shields.io/badge/Agentica-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor)](https://huggingface.co/datasets/LiAuto-DSR/GeoGramBench)
+</div>
 
 ## Overview
 Geometric spatial reasoning forms the foundation of many applications in artificial intelligence, yet the ability of large language models (LLMs) to operate over geometric information expressed in procedural code remains underexplored. In this paper, we address this gap by formalizing the \texttt{Program-to-Geometry} task, which challenges models to translate procedural drawing code into accurate and abstract geometric reasoning. To evaluate this capability, we present \textbf{GeoGramBench}, a benchmark of 500 carefully refined problems organized by a tailored three-level taxonomy that considers geometric complexity rather than traditional mathematical reasoning complexity. Our comprehensive evaluation of 17 frontier LLMs reveals consistent and pronounced deficiencies: even the most advanced models achieve less than 50\% accuracy at the highest abstraction level. These results highlight the unique challenges posed by program-driven spatial reasoning and establish GeoGramBench as a valuable resource for advancing research in symbolic-to-spatial geometric reasoning.
