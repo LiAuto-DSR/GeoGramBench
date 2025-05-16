@@ -11,10 +11,18 @@ GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
   🤗<a href="https://huggingface.co/datasets/LiAuto-DSR/GeoGramBench" target="_blank">Dataset</a>
 </p>
 
+We adopt the <a href="https://github.com/agentica-project/rllm/tree/deepscaler" target="_blank">DeepScaler</a> framework for evaluation, which provides a convenient and efficient evaluating pipeline. 
 
 ## Overview
 Geometric spatial reasoning forms the foundation of many applications in artificial intelligence, yet the ability of large language models (LLMs) to operate over geometric information expressed in procedural code remains underexplored. In this paper, we address this gap by formalizing the \texttt{Program-to-Geometry} task, which challenges models to translate procedural drawing code into accurate and abstract geometric reasoning. To evaluate this capability, we present \textbf{GeoGramBench}, a benchmark of 500 carefully refined problems organized by a tailored three-level taxonomy that considers geometric complexity rather than traditional mathematical reasoning complexity. Our comprehensive evaluation of 17 frontier LLMs reveals consistent and pronounced deficiencies: even the most advanced models achieve less than 50\% accuracy at the highest abstraction level. These results highlight the unique challenges posed by program-driven spatial reasoning and establish GeoGramBench as a valuable resource for advancing research in symbolic-to-spatial geometric reasoning.
 
+## Datasets
+
+We release our datasets through Hugging Face 🤗:
+
+| Dataset | Description                           | Size | Link                                           |
+| ------- | ------------------------------------- | ---- | ---------------------------------------------- |
+| GeoGramBench | 500 problems organized by a three-level taxonomy | 500  | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
 
 ## Taxonomy
 We propose a taxonomy whose primary principle is the construction of increasingly complex mathematical geometric diagrams from code.
@@ -24,8 +32,57 @@ We propose a taxonomy whose primary principle is the construction of increasingl
 
 ![](figures/geogrambench_example.png)
 
+
+## Getting Started
+### Installation
+Set up Deepscaler following their official [documentation](https://github.com/agentica-project/rllm/tree/deepscaler).
+```bash
+# Recommend Python 3.10.
+cd deepscaler
+pip install -e ./verl
+pip install -e .
+```
+### Data
+Our raw testing data in `deepscaler/data/test/GeoGramBench.json`, along with preprocessing scripts. To convert the raw data into Parquet files for training, run:
+```python
+# Output parquet files in data/*.parquet.
+python scripts/data/deepscaler_dataset.py
+```
+
 ## Evaluation
-We evaluate a total of 17 mainstream large language models (LLMs), spanning both proprietary API and leading open-source systems. The closed-source models include GPT-4o, GPT-o3-mini, the GPT-o1 series, and Gemini-Pro-1.5. The open-source models cover a wide range of scales, including DeepSeek-R1, DeepSeek-v3-0324, and QwQ-32B, as well as other prominent models from 32B down to 1.5B parameters: DeepSeek-R1-distillation variants, Bespoke-Stratos-32B, s1.1-32B, LIMO-32B, Sky-T1-mini-7B, and DeepScaleR-1.5B-preview.
+Our evaluation scripts automatically runs vLLM to generate 8 samples for each problem. To run our evaluation scripts, run:
+```bash
+#-----------
+MODEL_PATH=[CHECKPOINT_PATH]
+OUTPUT_DIR=[OUTPUT_DIR]
+
+##----------
+export VLLM_ATTENTION_BACKEND=XFORMERS
+
+DATATYPES=("math")
+TASKTYPES=("math")
+
+length=${#DATATYPES[@]}
+for ((i=0; i<length; i++)); do
+    python3 -m verl.trainer.main_generation \
+        trainer.nnodes=1 \
+        trainer.n_gpus_per_node=8 \
+        data.path=./data/${DATATYPES[i]}.parquet \
+    	data.data_source_key=${TASKTYPES[i]} \
+        data.output_path=${OUTPUT_DIR}/${DATATYPES[i]}.parquet \
+        data.n_samples=8 \
+        data.batch_size=128 \
+        model.path=${MODEL_PATH} \
+        rollout.temperature=0.6 \
+        rollout.response_length=31000 \
+        rollout.top_k=-1 \
+        rollout.top_p=0.95 \
+        rollout.gpu_memory_utilization=0.9 \
+        rollout.tensor_model_parallel_size=8
+done
+```
+
+We evaluate a total of 17 mainstream large language models (LLMs), spanning both proprietary API and leading open-source systems. The closed-source models include GPT-4o, GPT-o3-mini, the GPT-o1 series, and Gemini-Pro-1.5. The open-source models cover a wide range of scales, including DeepSeek-R1, DeepSeek-v3-0324, and QwQ-32B, as well as other prominent models from 32B down to 1.5B parameters: DeepSeek-R1-distillation variants, Bespoke-Stratos-32B, s1.1-32B, LIMO-32B, Sky-T1-mini-7B, and DeepScaleR-1.5B-preview. And we report Pass@1 accuracy averaged over 8 samples for each problem.
 
 | Model | Primitive | Compositional | Abstract | ALL |
 |-------|-----------|-----------|-----------|--------------|
