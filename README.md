@@ -43,7 +43,7 @@ pip install -e ./verl
 pip install -e .
 ```
 ### Data
-Our raw testing data in `deepscaler/data/test/GeoGramBench.json`. Following the preprocessing scripts in `deepscaler/data/[test]`, we convert the raw data into parquet file for directly evaluating. The evaluation parquet data is in `data/math.parquet`.
+Our raw testing data in `deepscaler/data/test/GeoGramBench.json`. Following the preprocessing scripts in `scripts/data/deepscaler_dataset.py`, we convert the raw data into parquet file for directly evaluating. The evaluation parquet data is in `data/math.parquet`.
 ```python
 # Output parquet files in data/*.parquet.
 python scripts/data/deepscaler_dataset.py
