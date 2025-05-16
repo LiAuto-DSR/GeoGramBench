@@ -1,6 +1,6 @@
 <div align="center">
 
- # GeoGramBench
+# GeoGramBench
 
 <div>
 GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
@@ -43,14 +43,14 @@ pip install -e ./verl
 pip install -e .
 ```
 ### Data
-Our raw testing data in `deepscaler/data/test/GeoGramBench.json`, along with preprocessing scripts. To convert the raw data into Parquet files for training, run:
+Our raw testing data in `deepscaler/data/test/GeoGramBench.json`. Following the preprocessing scripts in `deepscaler/data/[test]`, we convert the raw data into parquet file for directly evaluating. The evaluation parquet data is in `data/math.parquet`.
 ```python
 # Output parquet files in data/*.parquet.
 python scripts/data/deepscaler_dataset.py
 ```
 
 ## Evaluation
-Our evaluation scripts automatically runs vLLM to generate 8 samples for each problem. To run our evaluation scripts, run:
+Our evaluation scripts automatically runs vLLM to generate 8 samples for each problem. To run our evaluation, run:
 ```bash
 #-----------
 MODEL_PATH=[CHECKPOINT_PATH]
