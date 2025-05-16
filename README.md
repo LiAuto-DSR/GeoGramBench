@@ -25,9 +25,9 @@ We release our datasets through Hugging Face 🤗:
 | GeoGramBench | 500 problems organized by a three-level taxonomy | 500  | [🤗](https://huggingface.co/datasets/GAIR/LIMO) |
 
 ## Taxonomy
-We propose a taxonomy whose primary principle is the construction of increasingly complex mathematical geometric diagrams from code.
-<strong>Primitive Recognition</strong>: Problems involving procedural code that specify only one or two geometric primitives (e.g., points, lines, arcs, circles, polygons), focusing on basic mathematical properties such as length, area, or angle.
-<strong>Local Relation Composition</strong>: Problems with multiple local geometric elements, requiring the recognition, integration, and composition of spatial relationships among sub-components of the diagram.
+We propose a taxonomy whose primary principle is the construction of increasingly complex mathematical geometric diagrams from code.  
+<strong>Primitive Recognition</strong>: Problems involving procedural code that specify only one or two geometric primitives (e.g., points, lines, arcs, circles, polygons), focusing on basic mathematical properties such as length, area, or angle.  
+<strong>Local Relation Composition</strong>: Problems with multiple local geometric elements, requiring the recognition, integration, and composition of spatial relationships among sub-components of the diagram.  
 <strong>Global Abstract Integration</strong>: Items demanding spatial direction, parameterization, recursion, 3D objects, composite structures, or advanced geometric operations (e.g., rotation, folding, projection), thus requiring not only the construction of complex diagrams but also global and stepwise spatial reasoning across the entire configuration.
 
 ![](figures/geogrambench_example.png)
