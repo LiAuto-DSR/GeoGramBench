@@ -32,6 +32,8 @@ We propose a taxonomy whose primary principle is the construction of increasingl
 
 ![](figures/geogrambench_example.png)
 
+*Figure 1: Representative examples from GeoGramBench illustrating the three ascending <strong>Program-to-Geometry</strong> difficulty levels: <strong>Primitive Recognition</strong>, <strong>Local Relation Composition</strong>, and <strong>Global Abstract Integration</strong>.*
+
 
 ## Getting Started
 ### Installation
@@ -82,7 +84,7 @@ for ((i=0; i<length; i++)); do
 done
 ```
 
-We evaluate a total of 17 mainstream large language models (LLMs), spanning both proprietary API and leading open-source systems. The closed-source models include GPT-4o, GPT-o3-mini, the GPT-o1 series, and Gemini-Pro-1.5. The open-source models cover a wide range of scales, including DeepSeek-R1, DeepSeek-v3-0324, and QwQ-32B, as well as other prominent models from 32B down to 1.5B parameters: DeepSeek-R1-distillation variants, Bespoke-Stratos-32B, s1.1-32B, LIMO-32B, Sky-T1-mini-7B, and DeepScaleR-1.5B-preview. And we report Pass@1 accuracy averaged over 8 samples for each problem.
+We evaluate a total of 17 mainstream large language models (LLMs), spanning both proprietary API and leading open-source systems. The closed-source models include GPT-4o, GPT-o3-mini, the GPT-o1 series, and Gemini-Pro-1.5. The open-source models cover a wide range of scales, including DeepSeek-R1, DeepSeek-v3-0324, and QwQ-32B, as well as other prominent models from 32B down to 1.5B parameters: DeepSeek-R1-distillation variants, Bespoke-Stratos-32B, s1.1-32B, LIMO-32B, Sky-T1-mini-7B, and DeepScaleR-1.5B-preview. We report Pass@1 accuracy averaged over 8 samples for each problem.
 
 | Model | Primitive | Compositional | Abstract | ALL |
 |-------|-----------|-----------|-----------|--------------|
