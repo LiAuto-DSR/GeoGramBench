@@ -155,9 +155,15 @@ def main(config):
     data_sources = dataset['data_source']
     reward_model_data = dataset[config.data.reward_model_key]
 
+    extra_infos = dataset['extra_info']
+
     passes = 0
     total = len(dataset)
     total_scores = []
+
+    score_category1 = []
+    score_category2 = []
+    score_category3 = []
     
     for i in range(total):
         response_lst = responses[i]
@@ -170,6 +176,14 @@ def main(config):
         for r in response_lst:
             score = reward_fn(r, ground_truth)
             score_lst.append(score)
+
+        if extra_infos[i]['category'] == "Primitive Recognition":
+                score_category1.append(score_lst)
+        elif extra_infos[i]['category'] == "Local Relation Composition":
+            score_category2.append(score_lst)
+        elif extra_infos[i]['category'] == "Global Abstract Integration":
+            score_category3.append(score_lst)
+
         max_score = np.max(score_lst)
         total_scores.append(score_lst)
         if max_score == 1:
@@ -178,6 +192,11 @@ def main(config):
     n_samples = config.data.n_samples
     pass_at_n = passes / total
     pass_at_1 = np.mean(total_scores)
+
+    # category pass@1
+    pass_at_1_category1 = np.mean(score_category1)
+    pass_at_1_category2 = np.mean(score_category2)
+    pass_at_1_category3 = np.mean(score_category3)
 
     # Save metrics to CSV
     csv_path = os.path.join(output_dir, 'pass.csv')
@@ -189,6 +208,9 @@ def main(config):
         'model_path': config.model.path,
         'dataset': dataset_name,
         'pass@1': pass_at_1,
+        'category 1 Primitive Recognition pass@1': pass_at_1_category1,
+        'category 2 Local Relation Composition pass@1':pass_at_1_category2,
+        'category 3 Global Abstract Integration pass@1': pass_at_1_category3,
         f'pass@{n_samples}': pass_at_n
     }
 
