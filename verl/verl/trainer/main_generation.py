@@ -152,7 +152,7 @@ def main(config):
     # Compute evaluation metrics
     prompts = dataset[config.data.prompt_key]
     responses = dataset['responses']  # Using the generated responses
-    data_sources = dataset[config.data.data_source_key]
+    data_sources = dataset['data_source']
     reward_model_data = dataset[config.data.reward_model_key]
 
     passes = 0
