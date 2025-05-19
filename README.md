@@ -14,10 +14,11 @@ GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
 We adopt the <a href="https://github.com/agentica-project/rllm/tree/deepscaler" target="_blank">DeepScaler</a> framework for evaluation, which provides a convenient and efficient evaluating pipeline. 
 
 ## Overview
+
 Geometric spatial reasoning forms the foundation of many applications in artificial intelligence, yet the ability of large language models (LLMs) to operate over geometric information expressed in procedural code remains underexplored.  
-1. We address this gap by formalizing the <strong>Program-to-Geometry</strong> task, which challenges models to translate procedural drawing code into accurate and abstract geometric reasoning.  
-2. To evaluate this capability, we present <strong>GeoGramBench</strong>, a benchmark of 500 carefully refined problems organized by a tailored three-level taxonomy that considers geometric complexity rather than traditional mathematical reasoning complexity.  
-3. Our comprehensive evaluation of 17 frontier LLMs reveals consistent and pronounced deficiencies: even the most advanced models achieve less than 50% accuracy at the highest abstraction level. These results highlight the unique challenges posed by program-driven spatial reasoning and establish GeoGramBench as a valuable resource for advancing research in symbolic-to-spatial geometric reasoning.
+1. We formalize the <strong>Program-to-Geometry</strong> translation task as a critical and underexplored capability for LLMs, encompassing not only the interpretation of procedural drawing code but also the downstream geometric reasoning it enables.  
+2. We present <strong>GeoGramBench</strong>, a rigorously curated benchmark of 500 geometry problems with explicit procedural code, organized by a three-level taxonomy that enables comprehensive and fine-grained assessment of Program-to-Geometry competence.  
+3. We conduct an extensive evaluation of 17 models, providing accuracy metrics and detailed behavior analyses aligned with our research questions. Our results highlight persistent weaknesses in geometric program reasoning, establishing GeoGramBench as a novel evaluation axis and fostering future advancements in spatially-grounded, symbolically-rich model training and analysis.
 
 ## Datasets
 
@@ -39,7 +40,7 @@ We propose a taxonomy whose primary principle is the construction of increasingl
 
 ![](figures/geogrambench_example.png)
 
-*Figure 1: Representative examples from GeoGramBench illustrating the three ascending <strong>Program-to-Geometry</strong> difficulty levels: <strong>Primitive Recognition</strong>, <strong>Local Relation Composition</strong>, and <strong>Global Abstract Integration</strong>.*
+*Figure 1: Representative examples from GeoGramBench illustrating the three ascending Program-to-Geometry difficulty levels: Primitive Recognition, Local Relation Composition, and Global Abstract Integration.*
 
 
 ## Getting Started
