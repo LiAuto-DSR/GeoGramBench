@@ -14,7 +14,10 @@ GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
 We adopt the <a href="https://github.com/agentica-project/rllm/tree/deepscaler" target="_blank">DeepScaler</a> framework for evaluation, which provides a convenient and efficient evaluating pipeline. 
 
 ## Overview
-Geometric spatial reasoning forms the foundation of many applications in artificial intelligence, yet the ability of large language models (LLMs) to operate over geometric information expressed in procedural code remains underexplored. In this paper, we address this gap by formalizing the \texttt{Program-to-Geometry} task, which challenges models to translate procedural drawing code into accurate and abstract geometric reasoning. To evaluate this capability, we present \textbf{GeoGramBench}, a benchmark of 500 carefully refined problems organized by a tailored three-level taxonomy that considers geometric complexity rather than traditional mathematical reasoning complexity. Our comprehensive evaluation of 17 frontier LLMs reveals consistent and pronounced deficiencies: even the most advanced models achieve less than 50\% accuracy at the highest abstraction level. These results highlight the unique challenges posed by program-driven spatial reasoning and establish GeoGramBench as a valuable resource for advancing research in symbolic-to-spatial geometric reasoning.
+Geometric spatial reasoning forms the foundation of many applications in artificial intelligence, yet the ability of large language models (LLMs) to operate over geometric information expressed in procedural code remains underexplored.  
+1. We address this gap by formalizing the <strong>Program-to-Geometry</strong> task, which challenges models to translate procedural drawing code into accurate and abstract geometric reasoning.  
+2. To evaluate this capability, we present <strong>GeoGramBench</strong>, a benchmark of 500 carefully refined problems organized by a tailored three-level taxonomy that considers geometric complexity rather than traditional mathematical reasoning complexity.  
+3. Our comprehensive evaluation of 17 frontier LLMs reveals consistent and pronounced deficiencies: even the most advanced models achieve less than 50% accuracy at the highest abstraction level. These results highlight the unique challenges posed by program-driven spatial reasoning and establish GeoGramBench as a valuable resource for advancing research in symbolic-to-spatial geometric reasoning.
 
 ## Datasets
 
@@ -24,11 +27,14 @@ We release our datasets through Hugging Face 🤗:
 | ------- | ------------------------------------- | ---- | ---------------------------------------------- |
 | GeoGramBench | 500 problems organized by a three-level taxonomy | 500  | [🤗](https://huggingface.co/datasets/LiAuto-DSR/GeoGramBench) |
 
-## Taxonomy
+### Taxonomy
 We propose a taxonomy whose primary principle is the construction of increasingly complex mathematical geometric diagrams from code.  
-<strong>Primitive Recognition</strong>: Problems involving procedural code that specify only one or two geometric primitives (e.g., points, lines, arcs, circles, polygons), focusing on basic mathematical properties such as length, area, or angle.  
-<strong>Local Relation Composition</strong>: Problems with multiple local geometric elements, requiring the recognition, integration, and composition of spatial relationships among sub-components of the diagram.  
-<strong>Global Abstract Integration</strong>: Items demanding spatial direction, parameterization, recursion, 3D objects, composite structures, or advanced geometric operations (e.g., rotation, folding, projection), thus requiring not only the construction of complex diagrams but also global and stepwise spatial reasoning across the entire configuration.
+|  Taxonomy  | Description                           | Size |
+| ---------- | ------------------------------------- | ---- |
+| Primitive Recognition | Problems involving procedural code that specify only one or two geometric primitives (e.g., points, lines, arcs, circles, polygons), focusing on basic mathematical properties such as length, area, or angle. | 102  |
+| Local Relation Composition | Problems with multiple local geometric elements, requiring the recognition, integration, and composition of spatial relationships among sub-components of the diagram. | 279  |
+| Global Abstract Integration | Items demanding spatial direction, parameterization, recursion, 3D objects, composite structures, or advanced geometric operations (e.g., rotation, folding, projection), thus requiring not only the construction of complex diagrams but also global and stepwise spatial reasoning across the entire configuration. | 119  |
+
 
 ![](figures/geogrambench_example.png)
 
