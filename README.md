@@ -28,6 +28,7 @@ We release our datasets through Hugging Face 🤗:
 | GeoGramBench | 500 problems organized by a three-level taxonomy | 500  | [🤗](https://huggingface.co/datasets/LiAuto-DSR/GeoGramBench) |
 
 ### Taxonomy
+
 We propose a taxonomy whose primary principle is the construction of increasingly complex mathematical geometric diagrams from code.  
 |  Taxonomy  | Description                           | Size |
 | ---------- | ------------------------------------- | ---- |
