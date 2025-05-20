@@ -86,7 +86,7 @@ for ((i=0; i<length; i++)); do
         rollout.top_k=-1 \
         rollout.top_p=0.95 \
         rollout.gpu_memory_utilization=0.9 \
-        rollout.tensor_model_parallel_size=8 \
+        rollout.tensor_model_parallel_size=8
 done
 ```
 
