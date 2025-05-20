@@ -38,13 +38,14 @@ def make_map_fn(split: str):
     Returns:
         Function that processes individual dataset examples
     """
-    def process_fn(example: Dict[str, Any], idx: int) -> Optional[Dict[str, Any]]:
+    def process_fn(example: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         question = example.pop('problem')
+        geo_code = example.pop('geo_code')
         #instruction = "Let's think step by step and output the final answer within \\boxed{}."
         instruction = "Please reason step by step, and put your final answer within \\boxed{}."
-        question = f"{question} {instruction}"
+        question = f"{question} {geo_code} {instruction}"
         answer = example.pop('answer')
-        our_index = example.pop("index")
+        index = example.pop("index")
         category = example.pop('category')
 
         data = {
@@ -60,8 +61,7 @@ def make_map_fn(split: str):
             },
             "extra_info": {
                 'split': split,
-                'index': idx,
-                'our index': our_index,
+                'index': index,
                 'category': category,
             }
         }
@@ -71,7 +71,7 @@ def make_map_fn(split: str):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process datasets for DeepScaler training')
-    parser.add_argument('--local_dir', default=os.path.expanduser('~/deepscaler/data'),
+    parser.add_argument('--local_dir', default=os.path.expanduser('~/data'),
                        help='Local directory to save processed datasets')
     parser.add_argument('--hdfs_dir', default=None,
                        help='Optional HDFS directory to copy datasets to')
@@ -84,26 +84,26 @@ if __name__ == '__main__':
     makedirs(local_dir)
 
     # Initialize datasets
-    train_datasets = [TrainDataset.DEEPSCALER]
-    train_dataset = load_dataset(train_datasets[0])
+    #train_datasets = [TrainDataset.DEEPSCALER]
+    #train_dataset = load_dataset(train_datasets[0])
     test_datasets = [TestDataset.GEOGRAMBENCH]
     
     test_datasets_data = [load_dataset(d) for d in test_datasets]
 
     # Process training data
-    train_data: List[Dict[str, Any]] = []
-    process_fn = make_map_fn('train')
-    for idx, example in enumerate(train_dataset):
-        processed_example = process_fn(example, idx)
-        if processed_example is not None:
-            train_data.append(processed_example)
+    #train_data: List[Dict[str, Any]] = []
+    #process_fn = make_map_fn('train')
+    #for idx, example in enumerate(train_dataset):
+    #    processed_example = process_fn(example, idx)
+    #    if processed_example is not None:
+    #        train_data.append(processed_example)
 
     # Process and save each test dataset separately
     for test_dataset, test_data_list in zip(test_datasets, test_datasets_data):
         test_data: List[Dict[str, Any]] = []
         process_fn = make_map_fn('test')
         for idx, example in enumerate(test_data_list):
-            processed_example = process_fn(example, idx)
+            processed_example = process_fn(example)
             if processed_example is not None:
                 test_data.append(processed_example)
 
@@ -113,9 +113,9 @@ if __name__ == '__main__':
         print(f"{dataset_name} test data size:", len(test_data))
 
     # Save training dataset
-    print("train data size:", len(train_data))
-    train_df = pd.DataFrame(train_data)
-    train_df.to_parquet(os.path.join(local_dir, 'train.parquet'))
+    #print("train data size:", len(train_data))
+    #train_df = pd.DataFrame(train_data)
+    #train_df.to_parquet(os.path.join(local_dir, 'train.parquet'))
 
     # Optionally copy to HDFS
     if hdfs_dir is not None:
