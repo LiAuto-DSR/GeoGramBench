@@ -40,9 +40,12 @@ def make_map_fn(split: str):
     """
     def process_fn(example: Dict[str, Any], idx: int) -> Optional[Dict[str, Any]]:
         question = example.pop('problem')
-        instruction = "Let's think step by step and output the final answer within \\boxed{}."
+        #instruction = "Let's think step by step and output the final answer within \\boxed{}."
+        instruction = "Please reason step by step, and put your final answer within \\boxed{}."
         question = f"{question} {instruction}"
         answer = example.pop('answer')
+        our_index = example.pop("index")
+        category = example.pop('category')
 
         data = {
             "data_source": "",
@@ -57,7 +60,9 @@ def make_map_fn(split: str):
             },
             "extra_info": {
                 'split': split,
-                'index': idx
+                'index': idx,
+                'our index': our_index,
+                'category': category,
             }
         }
         return data
@@ -81,7 +86,7 @@ if __name__ == '__main__':
     # Initialize datasets
     train_datasets = [TrainDataset.DEEPSCALER]
     train_dataset = load_dataset(train_datasets[0])
-    test_datasets = [TestDataset.AIME, TestDataset.AMC, TestDataset.MATH, TestDataset.MINERVA, TestDataset.OLYMPIAD_BENCH]
+    test_datasets = [TestDataset.GEOGRAMBENCH]
     
     test_datasets_data = [load_dataset(d) for d in test_datasets]
 
