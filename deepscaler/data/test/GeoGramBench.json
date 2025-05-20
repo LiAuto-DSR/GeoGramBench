@@ -1,7 +1,7 @@
 [
     {
         "index": 1,
-        "problem": "Let $\\triangle ABC$ have area \\$240$. Points $X$, $Y$, and $Z$ are located on sides $AB$, $BC$, and $CA$, respectively, such that $\\frac{AX}{BX} = 3$, $\\frac{BY}{CY} = 4$, and $\\frac{CZ}{AZ} = 5$. Find the area of $\\triangle XYZ$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $\\triangle ABC$ have area \\$240$. Points $X$, $Y$, and $Z$ are located on sides $AB$, $BC$, and $CA$, respectively, such that $\\frac{AX}{BX} = 3$, $\\frac{BY}{CY} = 4$, and $\\frac{CZ}{AZ} = 5$. Find the area of $\\triangle XYZ$.",
         "geo_code": "[asy]\nsize(175);\ndefaultpen(linewidth(0.8));\npair A=(0,15),B=(0,-5),C=(25,0.5),X=origin,Y=(4C+B)/5,Z=(5A+C)/6;\ndraw(A--B--C--cycle^^X--Y--Z--cycle);\nlabel(\" $A$ \",A,N);\nlabel(\" $B$ \",B,S);\nlabel(\" $C$ \",C,E);\nlabel(\" $X$ \",X,W);\nlabel(\" $Y$ \",Y,S);\nlabel(\" $Z$ \",Z,NE);[/asy]",
         "answer": "$122$",
         "category": "Local Relation Composition",
@@ -9,7 +9,7 @@
     },
     {
         "index": 2,
-        "problem": "In circle $O$, chord $AB$ is extended beyond $B$ to a point $C$ such that $BC$ equals the radius of the circle. $CO$ is drawn and extended to $D$, and $AO$ is also drawn. If $y = 1$, find the value of $x$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In circle $O$, chord $AB$ is extended beyond $B$ to a point $C$ such that $BC$ equals the radius of the circle. $CO$ is drawn and extended to $D$, and $AO$ is also drawn. If $y = 1$, find the value of $x$.",
         "geo_code": "[asy]size(200);defaultpen(linewidth(0.7)+fontsize(10));\npair O=origin, D=dir(195), A=dir(150), B=dir(30), C=B+1*dir(0);\ndraw(O--A--C--D);\ndot(A^^B^^C^^D^^O);\npair point=O;\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $D$ \", D, dir(point--D));\nlabel(\" $O$ \", O, dir(285));\nlabel(\" $x$ \", O+0.1*dir(172.5), dir(172.5));\nlabel(\" $y$ \", C+0.4*dir(187.5), dir(187.5));\ndraw(Circle(O,1));\n[/asy]",
         "answer": "$3$",
         "category": "Local Relation Composition",
@@ -17,7 +17,7 @@
     },
     {
         "index": 3,
-        "problem": "In $\\triangle ABC$, suppose $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is the value of $b$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$, suppose $\\angle C = 3\\angle A$, $a = 27$, and $c = 48$. What is the value of $b$?",
         "geo_code": "[asy]size(200);\ndefaultpen(linewidth(0.7)+fontsize(10));\npair A=origin, B=(14,0), C=(10,6);\ndraw(A--B--C--cycle);\nlabel(\" $A$ \", A, SW);\nlabel(\" $B$ \", B, SE);\nlabel(\" $C$ \", C, N);\nlabel(\" $a$ \", B--C, dir(B--C)*dir(-90));\nlabel(\" $b$ \", A--C, dir(C--A)*dir(-90));\nlabel(\" $c$ \", A--B, dir(A--B)*dir(-90));\n[/asy]",
         "answer": "$35$",
         "category": "Primitive Recognition",
@@ -25,7 +25,7 @@
     },
     {
         "index": 4,
-        "problem": "Square $ABCD$ has side length \\$4$, and $M$ is the midpoint of $\\overline{CD}$. A circle with radius \\$2$ and center $M$ intersects a circle with radius \\$4$ and center $A$ at points $P$ and $D$. What is the distance from $P$ to $\\overline{AD}$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Square $ABCD$ has side length \\$4$, and $M$ is the midpoint of $\\overline{CD}$. A circle with radius \\$2$ and center $M$ intersects a circle with radius \\$4$ and center $A$ at points $P$ and $D$. What is the distance from $P$ to $\\overline{AD}$?",
         "geo_code": "[asy]unitsize(8mm);\ndefaultpen(linewidth(.8pt));\ndotfactor=4;\n\ndraw(Circle((2,0),2));\ndraw(Circle((0,4),4));\nclip(scale(4)*unitsquare);\ndraw(scale(4)*unitsquare);\nfilldraw(Circle((2,0),0.07));\nlabel(\" $A$ \",(0,4),NW);\nlabel(\" $B$ \",(4,4),NE);\nlabel(\" $C$ \",(4,0),SE);\nlabel(\" $D$ \",(0,0),SW);\nlabel(\" $M$ \",(2,0),S);\nlabel(\" $P$ \",(3.6,1.4),N);[/asy]",
         "answer": "$\\frac{16}{5}$",
         "category": "Local Relation Composition",
@@ -33,7 +33,7 @@
     },
     {
         "index": 5,
-        "problem": "A circle with center $O$ and radius \\$1$ contains point $A$. Segment $AB$ is tangent to the circle at $A$, and $\\angle AOB = 30^\\circ$. If point $C$ lies on $\\overline{OA}$ and $\\overline{BC}$ bisects $\\angle ABO$, find the length $OC$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A circle with center $O$ and radius \\$1$ contains point $A$. Segment $AB$ is tangent to the circle at $A$, and $\\angle AOB = 30^\\circ$. If point $C$ lies on $\\overline{OA}$ and $\\overline{BC}$ bisects $\\angle ABO$, find the length $OC$.",
         "geo_code": "[asy]import olympiad;\nunitsize(2cm);\ndefaultpen(fontsize(8pt)+linewidth(.8pt));\nlabelmargin=0.2;\ndotfactor=3;\n\npair O=(0,0);\npair A=(1,0);\npair B=(1,1.5);\npair D=bisectorpoint(A,B,O);\npair C=extension(B,D,O,A);\n\ndraw(Circle(O,1));\ndraw(O--A--B--cycle);\ndraw(B--C);\n\nlabel(\" $O$ \",O,SW);\ndot(O);\nlabel(\" $\\theta$ \",(0.1,0.05),ENE);\n\ndot(C);\nlabel(\" $C$ \",C,S);\n\ndot(A);\nlabel(\" $A$ \",A,E);\n\ndot(B);\nlabel(\" $B$ \",B,E);[/asy]",
         "answer": "$\\frac{2}{3}$",
         "category": "Local Relation Composition",
@@ -41,7 +41,7 @@
     },
     {
         "index": 6,
-        "problem": "In right triangle $\\triangle ABC$ with legs measuring \\$5$ and \\$12$, two arcs are drawn: one with center $A$ and radius \\$12$, and one with center $B$ and radius \\$5$. These arcs intersect the hypotenuse at points $M$ and $N$. Find the length of $MN$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In right triangle $\\triangle ABC$ with legs measuring \\$5$ and \\$12$, two arcs are drawn: one with center $A$ and radius \\$12$, and one with center $B$ and radius \\$5$. These arcs intersect the hypotenuse at points $M$ and $N$. Find the length of $MN$.",
         "geo_code": "[asy]size(200);\ndefaultpen(linewidth(0.7)+fontsize(10));\npair A=origin, B=(12,7), C=(12,0), M=12*dir(A--B), N=B+B.y*dir(B--A);\nreal r=degrees(B);\ndraw(A--B--C--cycle^^Arc(A,12,0,r)^^Arc(B,B.y,180+r,270));\npair point=incenter(A,B,C);\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $M$ \", M, dir(point--M));\nlabel(\" $N$ \", N, dir(point--N));\n\nlabel(\" $12$ \", (6,0), S);\nlabel(\" $5$ \", (12,3.5), E);[/asy]",
         "answer": "$4$",
         "category": "Local Relation Composition",
@@ -49,7 +49,7 @@
     },
     {
         "index": 7,
-        "problem": "On square $ABCD$, points $E, F, G,$ and $H$ lie on sides $\\overline{AB},\\,\\overline{BC},\\,\\overline{CD},$ and $\\overline{DA}$, respectively, such that $\\overline{EG} \\perp \\overline{FH}$ and $EG = FH = 34$. The segments $\\overline{EG}$ and $\\overline{FH}$ intersect at point $P$, and the areas of the quadrilaterals $AEPH$, $BFPE$, $CGPF$, and $DHPG$ are in the ratio \\$269:275:405:411$. Find the area of square $ABCD$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "On square $ABCD$, points $E, F, G,$ and $H$ lie on sides $\\overline{AB},\\,\\overline{BC},\\,\\overline{CD},$ and $\\overline{DA}$, respectively, such that $\\overline{EG} \\perp \\overline{FH}$ and $EG = FH = 34$. The segments $\\overline{EG}$ and $\\overline{FH}$ intersect at point $P$, and the areas of the quadrilaterals $AEPH$, $BFPE$, $CGPF$, and $DHPG$ are in the ratio \\$269:275:405:411$. Find the area of square $ABCD$.",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(linewidth(0.8)+fontsize(10.6));\npair A = (0,sqrt(850));\npair B = (0,0);\npair C = (sqrt(850),0);\npair D = (sqrt(850),sqrt(850));\ndraw(A--B--C--D--cycle);\ndotfactor = 3;\ndot(\" $A$ \",A,dir(135));\ndot(\" $B$ \",B,dir(215));\ndot(\" $C$ \",C,dir(305));\ndot(\" $D$ \",D,dir(45));\npair H = ((2sqrt(850)-sqrt(120))/6,sqrt(850));\npair F = ((2sqrt(850)+sqrt(306)+7)/6,0);\ndot(\" $H$ \",H,dir(90));\ndot(\" $F$ \",F,dir(270));\ndraw(H--F);\npair E = (0,(sqrt(850)-6)/2);\npair G = (sqrt(850),(sqrt(850)+sqrt(100))/2);\ndot(\" $E$ \",E,dir(180));\ndot(\" $G$ \",G,dir(0));\ndraw(E--G);\npair P = extension(H,F,E,G);\ndot(\" $P$ \",P,dir(60));\nlabel(\" $w$ \", (H+E)/2,fontsize(15));\nlabel(\" $x$ \", (E+F)/2,fontsize(15));\nlabel(\" $y$ \", (G+F)/2,fontsize(15));\nlabel(\" $z$ \", (H+G)/2,fontsize(15));\nlabel(\" $w:x:y:z=269:275:405:411$ \",(sqrt(850)/2,-4.5),fontsize(11));\n[/asy]",
         "answer": "$850$",
         "category": "Local Relation Composition",
@@ -57,7 +57,7 @@
     },
     {
         "index": 8,
-        "problem": "Let  $XYZ$  be an acute-angled triangle. Let  $s$  be the side-length of the square which has two adjacent vertices on side  $YZ$ , one vertex on side  $XY$  and one vertex on side  $XZ$ . Let  $h$  be the distance from  $X$  to the side  $YZ$  and let  $b$  be the distance from  $Y$  to  $Z$ .\n\n\n\nIf the vertices have coordinates  $X = (2, 4)$ ,  $Y = (0, 0)$  and  $Z = (4, 0)$ , find  $s$ .\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let  $XYZ$  be an acute-angled triangle. Let  $s$  be the side-length of the square which has two adjacent vertices on side  $YZ$ , one vertex on side  $XY$  and one vertex on side  $XZ$ . Let  $h$  be the distance from  $X$  to the side  $YZ$  and let  $b$  be the distance from  $Y$  to  $Z$ .\n\n\n\nIf the vertices have coordinates  $X = (2, 4)$ ,  $Y = (0, 0)$  and  $Z = (4, 0)$ , find  $s$ .",
         "geo_code": "[asy]\ndraw((4, 8)--(0, 0)--(14, 0)--cycle);\ndraw((2.54,0)--(2.54+5.1,0)--(2.54+5.1,5.1)--(2.54,5.1)--cycle);\nlabel(\" $X$ \",(4,8),N);\nlabel(\" $Y$ \",(0,0),W);\nlabel(\" $Z$ \",(14,0),E);\n[/asy]",
         "answer": "$2$",
         "category": "Local Relation Composition",
@@ -65,7 +65,7 @@
     },
     {
         "index": 9,
-        "problem": "Let  $XYZ$  be an acute-angled triangle. Let  $s$  be the side-length of the square which has two adjacent vertices on side  $YZ$ , one vertex on side  $XY$  and one vertex on side  $XZ$ . Let  $h$  be the distance from  $X$  to the side  $YZ$  and let  $b$  be the distance from  $Y$  to  $Z$ .\n\n\n\nGiven the height  $h = 3$  and  $s = 2$ , find the base  $b$ .\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let  $XYZ$  be an acute-angled triangle. Let  $s$  be the side-length of the square which has two adjacent vertices on side  $YZ$ , one vertex on side  $XY$  and one vertex on side  $XZ$ . Let  $h$  be the distance from  $X$  to the side  $YZ$  and let  $b$  be the distance from  $Y$  to  $Z$ .\n\n\n\nGiven the height  $h = 3$  and  $s = 2$ , find the base  $b$ .",
         "geo_code": "[asy]\npair S, D;\nD = 1.27;\nS = 2.55;\ndraw((2, 4)--(0, 0)--(7, 0)--cycle);\ndraw((1.27,0)--(1.27+2.55,0)--(1.27+2.55,2.55)--(1.27,2.55)--cycle);\nlabel(\" $X$ \",(2,4),N);\nlabel(\" $Y$ \",(0,0),W);\nlabel(\" $Z$ \",(7,0),E);\n[/asy]",
         "answer": "$6$",
         "category": "Local Relation Composition",
@@ -73,7 +73,7 @@
     },
     {
         "index": 10,
-        "problem": "Let $XYZ$ be an acute-angled triangle. Let $s$ denote the side length of a square with two adjacent vertices on side $YZ$, one vertex on side $XY$, and one vertex on side $XZ$. Let $h$ be the distance from $X$ to side $YZ$, and let $b$ be the distance from $Y$ to $Z$.\n\nIf the area of the square is \\$2017$, determine the minimum possible area of triangle $XYZ$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $XYZ$ be an acute-angled triangle. Let $s$ denote the side length of a square with two adjacent vertices on side $YZ$, one vertex on side $XY$, and one vertex on side $XZ$. Let $h$ be the distance from $X$ to side $YZ$, and let $b$ be the distance from $Y$ to $Z$.\n\nIf the area of the square is \\$2017$, determine the minimum possible area of triangle $XYZ$.",
         "geo_code": "[asy]\npair S, D;\nD = 1.27;\nS = 2.55;\ndraw((2, 4)--(0, 0)--(7, 0)--cycle);\ndraw((1.27,0)--(1.27+2.55,0)--(1.27+2.55,2.55)--(1.27,2.55)--cycle);\nlabel(\" $X$ \",(2,4),N);\nlabel(\" $Y$ \",(0,0),W);\nlabel(\" $Z$ \",(7,0),E);\n[/asy]",
         "answer": "$4034$",
         "category": "Local Relation Composition",
@@ -81,7 +81,7 @@
     },
     {
         "index": 11,
-        "problem": "Two circles $A$ and $B$, each with radius \\$1$, are externally tangent to one another. Four circles $P$, $Q$, $R$, and $S$, each with the same radius $r$, are arranged such that $P$ is externally tangent to $A$, $B$, $Q$, and $S$; $Q$ is externally tangent to $P$, $B$, and $R$; $R$ is externally tangent to $A$, $B$, $Q$, and $S$; and $S$ is externally tangent to $P$, $A$, and $R$. Find the value of $r$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Two circles $A$ and $B$, each with radius \\$1$, are externally tangent to one another. Four circles $P$, $Q$, $R$, and $S$, each with the same radius $r$, are arranged such that $P$ is externally tangent to $A$, $B$, $Q$, and $S$; $Q$ is externally tangent to $P$, $B$, and $R$; $R$ is externally tangent to $A$, $B$, $Q$, and $S$; and $S$ is externally tangent to $P$, $A$, and $R$. Find the value of $r$.",
         "geo_code": "[asy]\nunitsize(0.3 cm);\n\npair A, B, P, Q, R, S;\nreal r = (3 + sqrt(17))/2;\n\nA = (-1,0);\nB = (1,0);\nP = intersectionpoint(arc(A,r + 1,0,180), arc(B,r + 1,0,180));\nR = -P;\nQ = (r + 2,0);\nS = (-r - 2,0);\n\ndraw(Circle(A,1));\ndraw(Circle(B,1));\ndraw(Circle(P,r));\ndraw(Circle(Q,r));\ndraw(Circle(R,r));\ndraw(Circle(S,r));\n\nlabel(\" $A$ \", A);\nlabel(\" $B$ \", B);\nlabel(\" $P$ \", P);\nlabel(\" $Q$ \", Q);\nlabel(\" $R$ \", R);\nlabel(\" $S$ \", S);\n[/asy]",
         "answer": "$2$",
         "category": "Global Abstract Integration",
@@ -89,7 +89,7 @@
     },
     {
         "index": 12,
-        "problem": "In a circle with center $O$, $AD$ is a diameter and $ABC$ is a chord. If $BO = 5$ and $\\angle ABO = \\overset{\\frown}{CD} = 60^\\circ$, find the length of $BC$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In a circle with center $O$, $AD$ is a diameter and $ABC$ is a chord. If $BO = 5$ and $\\angle ABO = \\overset{\\frown}{CD} = 60^\\circ$, find the length of $BC$.",
         "geo_code": "[asy]size(200);\ndefaultpen(linewidth(0.7)+fontsize(10));\npair O=origin, A=dir(35), C=dir(155), D=dir(215), B=intersectionpoint(dir(125)--O, A--C);\ndraw(C--A--D^^B--O^^Circle(O,1));\npair point=O;\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $D$ \", D, dir(point--D));\nlabel(\" $O$ \", O, dir(305));\n\nlabel(\" $5$ \", B--O, dir(O--B)*dir(90));\nlabel(\" $60^\\circ$ \", dir(185), dir(185));\nlabel(\" $60^\\circ$ \", B+0.05*dir(-25), dir(-25));[/asy]",
         "answer": "$5$",
         "category": "Local Relation Composition",
@@ -97,7 +97,7 @@
     },
     {
         "index": 13,
-        "problem": "A rectangle $HOMF$ has sides $HO = 11$ and $OM = 5$. Let $\\triangle ABC$ be a triangle with $H$ as the orthocenter, $O$ as the circumcenter, $M$ as the midpoint of $BC$, and $F$ as the foot of the altitude from $A$. Find the length of $BC$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A rectangle $HOMF$ has sides $HO = 11$ and $OM = 5$. Let $\\triangle ABC$ be a triangle with $H$ as the orthocenter, $O$ as the circumcenter, $M$ as the midpoint of $BC$, and $F$ as the foot of the altitude from $A$. Find the length of $BC$.",
         "geo_code": "[asy]\nunitsize(0.3 cm);\npair F, H, M, O;\nF = (0,0);\nH = (0,5);\nO = (11,5);\nM = (11,0);\ndraw(H--O--M--F--cycle);\nlabel(\" $F$ \", F, SW);\nlabel(\" $H$ \", H, NW);\nlabel(\" $M$ \", M, SE);\nlabel(\" $O$ \", O, NE);\n[/asy]",
         "answer": "$28$",
         "category": "Local Relation Composition",
@@ -105,15 +105,15 @@
     },
     {
         "index": 14,
-        "problem": "A circle with radius \\$1$ is surrounded by \\$4$ circles of radius $r$, as shown. What is the value of $r$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
-        "geo_code": "[asy]defaultpen(linewidth(.9pt));\n\nreal r = 1 + sqrt(2);\npair A = dir(45)*(r + 1);\npair B = dir(135)*(r + 1);\npair C = dir(-135)*(r + 1);\npair D = dir(-45)*(r + 1);\n\ndraw(Circle(origin,1));\ndraw(Circle(A,r));draw(Circle(B,r));draw(Circle(C,r));draw(Circle(D,r));\n\ndraw(A--(dir(45)*r + A));\ndraw(B--(dir(45)*r + B));\ndraw(C--(dir(45)*r + C));\ndraw(D--(dir(45)*r + D));\ndraw(origin--(dir(25)));\n\nlabel(\" $r$ \",midpoint(A--(dir(45)*r + A)), SE);\nlabel(\" $r$ \",midpoint(B--(dir(45)*r + B)), SE);\nlabel(\" $r$ \",midpoint(C--(dir(45)*r + C)), SE);\nlabel(\" $r$ \",midpoint(D--(dir(45)*r + D)), SE);\nlabel(\" $1$ \",origin,W);[/asy]",
+        "problem": "A circle with radius \\$1$ is surrounded by \\$4$ circles of radius $r$, as shown. What is the value of $r$?",
+        "geo_code": "[asy]defaultpen(linewidth(.9pt));\n\nreal r = 2 + sqrt(2);\npair A = dir(45)*(r + sqrt(2));\npair B = dir(135)*(r + sqrt(2));\npair C = dir(-135)*(r + sqrt(2));\npair D = dir(-45)*(r + sqrt(2));\n\ndraw(Circle(origin,sqrt(2)));\ndraw(Circle(A,r));draw(Circle(B,r));draw(Circle(C,r));draw(Circle(D,r));\n\ndraw(A--(dir(45)*r + A));\ndraw(B--(dir(45)*r + B));\ndraw(C--(dir(45)*r + C));\ndraw(D--(dir(45)*r + D));\ndraw(origin--(dir(25)*sqrt(2)));\n\nlabel(\" $r$ \",midpoint(A--(dir(45)*r + A)), SE);\nlabel(\" $r$ \",midpoint(B--(dir(45)*r + B)), SE);\nlabel(\" $r$ \",midpoint(C--(dir(45)*r + C)), SE);\nlabel(\" $r$ \",midpoint(D--(dir(45)*r + D)), SE);\nlabel(\" $1$ \",origin,W);[/asy]",
         "answer": "$1 + \\sqrt{2}$",
         "category": "Local Relation Composition",
         "source": "aops_forum"
     },
     {
         "index": 15,
-        "problem": "Older television screens have an aspect ratio of \\$4:3$, meaning the width is to the height as \\$4$ is to \\$3$. Many movies have a different aspect ratio, so when shown on such a screen, black bars of equal height (called 'letterboxing') appear at the top and bottom. Suppose a movie with an aspect ratio of \\$2:1$ is displayed on a television screen with a \\$27$-inch diagonal and \\$4:3$ aspect ratio. What is the height, in inches, of each black bar?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Older television screens have an aspect ratio of \\$4:3$, meaning the width is to the height as \\$4$ is to \\$3$. Many movies have a different aspect ratio, so when shown on such a screen, black bars of equal height (called 'letterboxing') appear at the top and bottom. Suppose a movie with an aspect ratio of \\$2:1$ is displayed on a television screen with a \\$27$-inch diagonal and \\$4:3$ aspect ratio. What is the height, in inches, of each black bar?",
         "geo_code": "[asy]unitsize(1mm);\ndefaultpen(linewidth(.8pt));\nfilldraw((0,0)--(8,0)--(8,1)--(0,1)--cycle,grey,black);\nfilldraw((0,5)--(8,5)--(8,6)--(0,6)--cycle,grey,black);\ndraw((0,1)--(0,5));\ndraw((8,1)--(8,5));[/asy]",
         "answer": "$2.7$",
         "category": "Primitive Recognition",
@@ -121,7 +121,7 @@
     },
     {
         "index": 16,
-        "problem": "In right triangle $ABC$, $BC = 5$, $AC = 12$, and $AM = 5$. Let $\\overline{MN} \\perp \\overline{AC}$ and $\\overline{NP} \\perp \\overline{BC}$, with $N$ lying on $AB$. If $y = MN + NP$, which is one-half the perimeter of rectangle $MCPN$, find the value of $y$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In right triangle $ABC$, $BC = 5$, $AC = 12$, and $AM = 5$. Let $\\overline{MN} \\perp \\overline{AC}$ and $\\overline{NP} \\perp \\overline{BC}$, with $N$ lying on $AB$. If $y = MN + NP$, which is one-half the perimeter of rectangle $MCPN$, find the value of $y$.",
         "geo_code": "[asy]defaultpen(linewidth(.8pt));\nunitsize(2cm);\npair A = origin;\npair M = (1,0);\npair C = (2,0);\npair P = (2,0.5);\npair B = (2,1);\npair Q = (1,0.5);\n\ndraw(A--B--C--cycle);\ndraw(M--Q--P);\n\nlabel(\" $A$ \",A,SW);\nlabel(\" $M$ \",M,S);\nlabel(\" $C$ \",C,SE);\nlabel(\" $P$ \",P,E);\nlabel(\" $B$ \",B,NE);\nlabel(\" $N$ \",Q,NW);[/asy]",
         "answer": "$\\frac{109}{12}$",
         "category": "Local Relation Composition",
@@ -129,7 +129,7 @@
     },
     {
         "index": 17,
-        "problem": "A rectangle intersects a circle as shown such that $AB = 4$, $BC = 5$, and $DE = 3$. Find the length of $EF$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A rectangle intersects a circle as shown such that $AB = 4$, $BC = 5$, and $DE = 3$. Find the length of $EF$.",
         "geo_code": "[asy]size(200);\ndefaultpen(linewidth(0.7)+fontsize(10));\npair D=origin, E=(3,0), F=(10,0), G=(12,0), H=(12,1), A=(0,1), B=(4,1), C=(9,1), O=circumcenter(B,C,F);\ndraw(D--G--H--A--cycle);\ndraw(Circle(O, abs(O-C)));\nlabel(\" $A$ \", A, NW);\nlabel(\" $B$ \", B, NW);\nlabel(\" $C$ \", C, NE);\nlabel(\" $D$ \", D, SW);\nlabel(\" $E$ \", E, SE);\nlabel(\" $F$ \", F, SW);\n\nlabel(\"4\", (2,0.85), N);\nlabel(\"3\", D--E, S);\nlabel(\"5\", (6.5,0.85), N);\n[/asy]",
         "answer": "$7$",
         "category": "Local Relation Composition",
@@ -137,7 +137,7 @@
     },
     {
         "index": 18,
-        "problem": "Two concentric circles have radii \\$1$ and \\$4$. Between them, six congruent circles are arranged in a ring so that each is tangent to its two neighboring circles. Of these six, three (shown lightly shaded) are tangent on the inside to the circle of radius \\$4$, and the other three (shown darkly shaded) are tangent on the outside to the circle of radius \\$1$. The radius of each of the six congruent circles can be expressed as $\\frac{k + \\sqrt{m}}{n}$, where $k$, $m$, and $n$ are integers with $k$ and $n$ relatively prime. Compute the value of $k + m + n$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Two concentric circles have radii \\$1$ and \\$4$. Between them, six congruent circles are arranged in a ring so that each is tangent to its two neighboring circles. Of these six, three (shown lightly shaded) are tangent on the inside to the circle of radius \\$4$, and the other three (shown darkly shaded) are tangent on the outside to the circle of radius \\$1$. The radius of each of the six congruent circles can be expressed as $\\frac{k + \\sqrt{m}}{n}$, where $k$, $m$, and $n$ are integers with $k$ and $n$ relatively prime. Compute the value of $k + m + n$.",
         "geo_code": "[asy]\nsize(150);\ndefaultpen(linewidth(0.8));\nreal r = (sqrt(133)-9)/2;\ndraw(circle(origin,1)^^circle(origin,4));\nfor(int i=0;i<=2;i=i+1)\n{\nfilldraw(circle(dir(90 + i*120)*(4-r),r),gray);\n}\nfor(int j=0;j<=2;j=j+1)\n{\nfilldraw(circle(dir(30+j*120)*(1+r),r),darkgray);\n}\n[/asy]",
         "answer": "$126$",
         "category": "Global Abstract Integration",
@@ -145,7 +145,7 @@
     },
     {
         "index": 19,
-        "problem": "If $\\angle A = 20^\\circ$ and $\\angle AFG = \\angle AGF$, what is the value of $\\angle B + \\angle D$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "If $\\angle A = 20^\\circ$ and $\\angle AFG = \\angle AGF$, what is the value of $\\angle B + \\angle D$?",
         "geo_code": "[asy]\npair A,B,C,D,EE,F,G;\nA = (0,0);\nB = (9,4);\nC = (21,0);\nD = (13,-12);\nEE = (4,-16);\nF = (13/2,-6);\nG = (8,0);\n\ndraw(A--C--EE--B--D--cycle);\n\nlabel(\" $A$ \",A,W);\nlabel(\" $B$ \",B,N);\nlabel(\" $C$ \",C,E);\nlabel(\" $D$ \",D,SE);\nlabel(\" $E$ \",EE,SW);\nlabel(\" $F$ \",F,WSW);\nlabel(\" $G$ \",G,NW);\n[/asy]",
         "answer": "$80$",
         "category": "Local Relation Composition",
@@ -153,7 +153,7 @@
     },
     {
         "index": 20,
-        "problem": "The pattern in the figure below continues inward infinitely. The base of the largest triangle is \\$1$, and all triangles are equilateral. Find the total shaded area.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The pattern in the figure below continues inward infinitely. The base of the largest triangle is \\$1$, and all triangles are equilateral. Find the total shaded area.",
         "geo_code": "[asy]\ndefaultpen(linewidth(0.8));\npen blu = rgb(0,112,191);\nreal r=sqrt(3);\nfill((8,0)--(0,8r)--(-8,0)--cycle, blu);\nfill(origin--(4,4r)--(-4,4r)--cycle, white);\nfill((2,2r)--(0,4r)--(-2,2r)--cycle, blu);\nfill((0,2r)--(1,3r)--(-1,3r)--cycle, white);[/asy]",
         "answer": "$\\frac{\\sqrt{3}}{5}$",
         "category": "Global Abstract Integration",
@@ -161,7 +161,7 @@
     },
     {
         "index": 21,
-        "problem": "Points $K$, $L$, $M$, and $N$ are located in the plane of square $ABCD$ such that $AKB$, $BLC$, $CMD$, and $DNA$ are all equilateral triangles. If the area of $ABCD$ is \\$16$, find the area of quadrilateral $KLMN$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Points $K$, $L$, $M$, and $N$ are located in the plane of square $ABCD$ such that $AKB$, $BLC$, $CMD$, and $DNA$ are all equilateral triangles. If the area of $ABCD$ is \\$16$, find the area of quadrilateral $KLMN$.",
         "geo_code": "[asy]unitsize(2cm);\ndefaultpen(fontsize(8)+linewidth(0.8));\npair A=(-0.5,0.5), B=(0.5,0.5), C=(0.5,-0.5), D=(-0.5,-0.5);\npair K=(0,1.366), L=(1.366,0), M=(0,-1.366), N=(-1.366,0);\ndraw(A--N--K--A--B--K--L--B--C--L--M--C--D--M--N--D--A);\nlabel(\" $A$ \",A,SE);\nlabel(\" $B$ \",B,SW);\nlabel(\" $C$ \",C,NW);\nlabel(\" $D$ \",D,NE);\nlabel(\" $K$ \",K,NNW);\nlabel(\" $L$ \",L,E);\nlabel(\" $M$ \",M,S);\nlabel(\" $N$ \",N,W);[/asy]",
         "answer": "$32 + 16\\sqrt{3}$",
         "category": "Local Relation Composition",
@@ -169,7 +169,7 @@
     },
     {
         "index": 22,
-        "problem": "The area of the dark gray triangle depicted below is  $35$ , and a segment is divided into lengths  $14$  and  $10$  as shown below. What is the area of the light gray triangle?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The area of the dark gray triangle depicted below is  $35$ , and a segment is divided into lengths  $14$  and  $10$  as shown below. What is the area of the light gray triangle?",
         "geo_code": "[asy] \nsize(150);\nfilldraw((0,0)--(0,12)--(24,-60/7)--cycle, lightgray);\nfilldraw((14,0)--(14,5)--(0,12)--cycle, gray);\ndraw((0,0)--(24,0)--(0,12)--cycle);\ndraw((0,0)--(24,0)--(24,-60/7)--cycle);\ndraw((0,12)--(24,-60/7));\ndraw((14,5)--(14,0));\ndot((0,0));\ndot((0,12));\ndot((14,5));\ndot((24,0));\ndot((14,0));\ndot((24,-60/7));\nlabel(\" $14$ \", (7,0), S);\nlabel(\" $10$ \", (19,0), S);\ndraw((0,2/3)--(2/3,2/3)--(2/3,0));\ndraw((14,2/3)--(14+2/3,2/3)--(14+2/3,0));\ndraw((24-2/3,0)--(24-2/3,-2/3)--(24,-2/3));\n[/asy]",
         "answer": "$144$",
         "category": "Local Relation Composition",
@@ -177,7 +177,7 @@
     },
     {
         "index": 23,
-        "problem": "The centers of the faces of the right rectangular prism shown below are connected to form an octahedron. What is the volume of this octahedron?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The centers of the faces of the right rectangular prism shown below are connected to form an octahedron. What is the volume of this octahedron?",
         "geo_code": "[asy]\nimport three; size(2inch);\ncurrentprojection=orthographic(4,2,2);\ndraw((0,0,0)--(0,0,3),dashed);\ndraw((0,0,0)--(0,4,0),dashed);\ndraw((0,0,0)--(5,0,0),dashed);\ndraw((5,4,3)--(5,0,3)--(5,0,0)--(5,4,0)--(0,4,0)--(0,4,3)--(0,0,3)--(5,0,3));\ndraw((0,4,3)--(5,4,3)--(5,4,0));\nlabel(\"3\",(5,0,3)--(5,0,0),W);\nlabel(\"4\",(5,0,0)--(5,4,0),S);\nlabel(\"5\",(5,4,0)--(0,4,0),SE);\n[/asy]",
         "answer": "$10$",
         "category": "Global Abstract Integration",
@@ -185,7 +185,7 @@
     },
     {
         "index": 24,
-        "problem": "Six cubes, each with edge length \\$1$ inch, are joined together as shown. Find the total surface area, in square inches, including the top, bottom, and sides.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Six cubes, each with edge length \\$1$ inch, are joined together as shown. Find the total surface area, in square inches, including the top, bottom, and sides.",
         "geo_code": "[asy]\ndraw((0,0)--(0,1)--(1,1)--(1,0)--cycle);\ndraw((0,1)--(0.5,1.5)--(1.5,1.5)--(1,1));\ndraw((1,0)--(1.5,0.5)--(1.5,1.5));\ndraw((0.5,1.5)--(1,2)--(1.5,2));\ndraw((1.5,1.5)--(1.5,3.5)--(2,4)--(3,4)--(2.5,3.5)--(2.5,0.5)--(1.5,.5));\ndraw((1.5,3.5)--(2.5,3.5));\ndraw((1.5,1.5)--(3.5,1.5)--(3.5,2.5)--(1.5,2.5));\ndraw((3,4)--(3,3)--(2.5,2.5));\ndraw((3,3)--(4,3)--(4,2)--(3.5,1.5));\ndraw((4,3)--(3.5,2.5));\ndraw((2.5,.5)--(3,1)--(3,1.5));[/asy]",
         "answer": "$26$",
         "category": "Local Relation Composition",
@@ -193,7 +193,7 @@
     },
     {
         "index": 25,
-        "problem": "Points $A$ and $B$ lie on a circle centered at $O$ such that $\\angle AOB$ is a right angle. Points $C$ and $D$ are located on radii $OA$ and $OB$, respectively, such that $AC = T - 3$, $CD = 5$, and $BD = 6$. Determine the area of quadrilateral $ACDB$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Points $A$ and $B$ lie on a circle centered at $O$ such that $\\angle AOB$ is a right angle. Points $C$ and $D$ are located on radii $OA$ and $OB$, respectively, such that $AC = T - 3$, $CD = 5$, and $BD = 6$. Determine the area of quadrilateral $ACDB$.",
         "geo_code": "[asy]\ndraw(circle((0,0),10));\ndraw((0,10)--(0,0)--(10,0)--(0,10));\ndraw((0,3)--(4,0));\nlabel(\"O\",(0,0),SW);\nlabel(\"C\",(0,3),W);\nlabel(\"A\",(0,10),N);\nlabel(\"D\",(4,0),S);\nlabel(\"B\",(10,0),E);\n[/asy]",
         "answer": "$44$",
         "category": "Local Relation Composition",
@@ -201,7 +201,7 @@
     },
     {
         "index": 26,
-        "problem": "In an isosceles right triangle $AOB$, points $P$, $Q$, and $S$ are chosen on sides $OB$, $OA$, and $AB$, respectively, so that a square $PQRS$ is constructed as shown. If $OP = a$ and $OQ = b$, and the area of $PQRS$ is $\\dfrac{2}{5}$ the area of triangle $AOB$, determine the ratio $a : b$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In an isosceles right triangle $AOB$, points $P$, $Q$, and $S$ are chosen on sides $OB$, $OA$, and $AB$, respectively, so that a square $PQRS$ is constructed as shown. If $OP = a$ and $OQ = b$, and the area of $PQRS$ is $\\dfrac{2}{5}$ the area of triangle $AOB$, determine the ratio $a : b$.",
         "geo_code": "[asy]\n\npair A = (0,3);\npair B = (0,0);\npair C = (3,0);\npair D = (0,1.5);\npair E = (0.35,0);\npair F = (1.2,1.8);\npair J = (0.17,0);\npair Y = (0.17,0.75);\n\npair Z = (1.6,0.2);\ndraw(A--B);\ndraw(B--C);\ndraw(C--A);\ndraw(D--F--Z--E--D);\ndraw(\" $O$ \", B, dir(180));\ndraw(\" $B$ \", A, dir(45));\ndraw(\" $A$ \", C, dir(45));\ndraw(\" $Q$ \", E, dir(45));\ndraw(\" $P$ \", D, dir(45));\ndraw(\" $R$ \", Z, dir(45));\ndraw(\" $S$ \", F, dir(45));\ndraw(\" $a$ \", Y, dir(210));\ndraw(\" $b$ \", J, dir(100));\n[/asy]",
         "answer": "$2$",
         "category": "Local Relation Composition",
@@ -209,7 +209,7 @@
     },
     {
         "index": 27,
-        "problem": "In circle $O$, let $Q$ be the midpoint of radius $OX$. At $Q$, $\\overline{AB} \\perp \\overline{XY}$. The semicircle with diameter $\\overline{AB}$ intersects $\\overline{XY}$ at $M$. Line $\\overline{AM}$ meets circle $O$ at $C$, and line $\\overline{BM}$ meets circle $O$ at $D$. Line $\\overline{AD}$ is drawn. If the radius of circle $O$ is \\$1$, what is the length of $AD$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In circle $O$, let $Q$ be the midpoint of radius $OX$. At $Q$, $\\overline{AB} \\perp \\overline{XY}$. The semicircle with diameter $\\overline{AB}$ intersects $\\overline{XY}$ at $M$. Line $\\overline{AM}$ meets circle $O$ at $C$, and line $\\overline{BM}$ meets circle $O$ at $D$. Line $\\overline{AD}$ is drawn. If the radius of circle $O$ is \\$1$, what is the length of $AD$?",
         "geo_code": "[asy]defaultpen(linewidth(.8pt));\nunitsize(2.5cm);\n\nreal m = 0;\nreal b = 0;\n\npair O = origin;\npair X = (-1,0);\npair Y = (1,0);\npair Q = midpoint(O--X);\npair A = (Q.x, -1*sqrt(3)/2);\npair B = (Q.x, -1*A.y);\npair M = (Q.x + sqrt(3)/2,0);\n\nm = (B.y - M.y)/(B.x - M.x);\nb = (B.y - m*B.x);\n\npair D = intersectionpoint(Circle(O,1),M--(1.5,1.5*m + b));\n\nm = (A.y - M.y)/(A.x - M.x);\nb = (A.y - m*A.x);\n\npair C = intersectionpoint(Circle(O,1),M--(1.5,1.5*m + b));\n\ndraw(Circle(O,1));\ndraw(Arc(Q,sqrt(3)/2,-90,90));\ndraw(A--B);\ndraw(X--Y);\ndraw(B--D);\ndraw(A--C);\ndraw(A--D);\ndot(O);dot(M);\n\nlabel(\" $B$ \",B,NW);\nlabel(\" $C$ \",C,NE);\nlabel(\" $Y$ \",Y,E);\nlabel(\" $D$ \",D,SE);\nlabel(\" $A$ \",A,SW);\nlabel(\" $X$ \",X,W);\nlabel(\" $Q$ \",Q,SW);\nlabel(\" $O$ \",O,SW);\nlabel(\" $M$ \",M,NE+2N);[/asy]",
         "answer": "$\\sqrt{2}$",
         "category": "Local Relation Composition",
@@ -217,7 +217,7 @@
     },
     {
         "index": 28,
-        "problem": "In $\\triangle ABC$, points $D$ and $E$ are located on $\\overline{BC}$ and $\\overline{AC}$, respectively. Suppose $\\overline{AD}$ and $\\overline{BE}$ intersect at $T$ such that $AT/DT = 3$ and $BT/ET = 4$. Find the value of $CD/BD$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$, points $D$ and $E$ are located on $\\overline{BC}$ and $\\overline{AC}$, respectively. Suppose $\\overline{AD}$ and $\\overline{BE}$ intersect at $T$ such that $AT/DT = 3$ and $BT/ET = 4$. Find the value of $CD/BD$.",
         "geo_code": "[asy]unitsize(2cm);\ndefaultpen(linewidth(.8pt));\n\npair A = (0,0);\npair C = (2,0);\npair B = dir(57.5)*2;\npair E = waypoint(C--A,0.25);\npair D = waypoint(C--B,0.25);\npair T = intersectionpoint(D--A,E--B);\n\nlabel(\" $B$ \",B,NW);label(\" $A$ \",A,SW);label(\" $C$ \",C,SE);label(\" $D$ \",D,NE);label(\" $E$ \",E,S);label(\" $T$ \",T,2*W+N);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\ndraw(B--E);[/asy]",
         "answer": "$\\frac{4}{11}$",
         "category": "Local Relation Composition",
@@ -225,7 +225,7 @@
     },
     {
         "index": 29,
-        "problem": "Two squares, each with side length \\$12$, are positioned so that one lies exactly on top of the other. One square is then rotated about a vertex by \\$30^\\circ$ with respect to the other. Determine the area of the region common to both squares.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Two squares, each with side length \\$12$, are positioned so that one lies exactly on top of the other. One square is then rotated about a vertex by \\$30^\\circ$ with respect to the other. Determine the area of the region common to both squares.",
         "geo_code": "[asy]\nunitsize (2 cm);\n\npair A, B, C, D, Bp, Cp, Dp, P;\n\nA = (0,0);\nB = (-1,0);\nC = (-1,1);\nD = (0,1);\nBp = rotate(-30)*(B);\nCp = rotate(-30)*(C);\nDp = rotate(-30)*(D);\nP = extension(C, D, Bp, Cp);\n\nfill(A--Bp--P--D--cycle, gray(0.8));\ndraw(A--B--C--D--cycle);\ndraw(A--Bp--Cp--Dp--cycle);\n\nlabel(\" $30^\\circ$ \", (-0.5,0.1), fontsize(10));\n[/asy]",
         "answer": "$48\\sqrt{3}$",
         "category": "Global Abstract Integration",
@@ -233,7 +233,7 @@
     },
     {
         "index": 30,
-        "problem": "In the figure, $\\angle C = 90^\\circ$, $AD = DB$, $DE \\perp AB$, $AB = 20$, and $AC = 12$. What is the area of quadrilateral $ADEC$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, $\\angle C = 90^\\circ$, $AD = DB$, $DE \\perp AB$, $AB = 20$, and $AC = 12$. What is the area of quadrilateral $ADEC$?",
         "geo_code": "[asy] unitsize(7); defaultpen(linewidth(.8pt)+fontsize(10pt)); pair A,B,C,D,E; A=(0,0); B=(20,0); C=(36/5,48/5); D=(10,0); E=(10,75/10); draw(A--B--C--cycle); draw(D--E); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,S); label(\"$E$\",E,NE); draw(rightanglemark(B,D,E,30)); [/asy]",
         "answer": "$58\\frac{1}{2}$",
         "category": "Local Relation Composition",
@@ -241,7 +241,7 @@
     },
     {
         "index": 31,
-        "problem": "Given the diagram, where $A$, $B$, and $C$ are the points of tangency, determine the value of $x$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Given the diagram, where $A$, $B$, and $C$ are the points of tangency, determine the value of $x$.",
         "geo_code": "[asy] unitsize(5cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=3; pair A=(-3*sqrt(3)/32,9/32), B=(3*sqrt(3)/32, 9/32), C=(0,9/16); pair O=(0,3/8); draw((-2/3,9/16)--(2/3,9/16)); draw((-2/3,1/2)--(-sqrt(3)/6,1/2)--(0,0)--(sqrt(3)/6,1/2)--(2/3,1/2)); draw(Circle(O,3/16)); draw((-2/3,0)--(2/3,0)); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$\\frac{3}{8}$\",O); draw(O+.07*dir(60)--O+3/16*dir(60),EndArrow(3)); draw(O+.07*dir(240)--O+3/16*dir(240),EndArrow(3)); label(\"$\\frac{1}{2}$\",(.5,.25)); draw((.5,.33)--(.5,.5),EndArrow(3)); draw((.5,.17)--(.5,0),EndArrow(3)); label(\"$x$\",midpoint((.5,.5)--(.5,9/16))); draw((.5,5/8)--(.5,9/16),EndArrow(3)); label(\"$60^{\\circ}$\",(0.01,0.12)); dot(A); dot(B); dot(C);[/asy]",
         "answer": "$\\frac{1}{16}$",
         "category": "Local Relation Composition",
@@ -249,7 +249,7 @@
     },
     {
         "index": 32,
-        "problem": "Point $F$ is taken on side $AD$ of square $ABCD$. At $C$, a perpendicular is drawn to $CF$, meeting $AB$ extended at $E$. The area of $ABCD$ is \\$256$ square inches and the area of $\\triangle CEF$ is \\$200$ square inches. Find the number of inches in $BE$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Point $F$ is taken on side $AD$ of square $ABCD$. At $C$, a perpendicular is drawn to $CF$, meeting $AB$ extended at $E$. The area of $ABCD$ is \\$256$ square inches and the area of $\\triangle CEF$ is \\$200$ square inches. Find the number of inches in $BE$.",
         "geo_code": "[asy] size(6cm); pair A = (0, 0), B = (1, 0), C = (1, 1), D = (0, 1), E = (1.3, 0), F = (0, 0.7); draw(A--B--C--D--cycle); draw(F--C--E--B); label(\"$A$\", A, SW); label(\"$B$\", B, S); label(\"$C$\", C, N); label(\"$D$\", D, NW); label(\"$E$\", E, SE); label(\"$F$\", F, W); [/asy]",
         "answer": "$12$",
         "category": "Local Relation Composition",
@@ -257,7 +257,7 @@
     },
     {
         "index": 33,
-        "problem": "Inside square $ABCD$ (see figure) with side length \\$12$ inches, segment $AE$ is drawn where $E$ is the point on $DC$ that is \\$5$ inches from $D$. The perpendicular bisector of $AE$ is drawn and meets $AE$, $AD$, and $BC$ at points $M$, $P$, and $Q$, respectively. Find $\\dfrac{PM}{MQ}$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Inside square $ABCD$ (see figure) with side length \\$12$ inches, segment $AE$ is drawn where $E$ is the point on $DC$ that is \\$5$ inches from $D$. The perpendicular bisector of $AE$ is drawn and meets $AE$, $AD$, and $BC$ at points $M$, $P$, and $Q$, respectively. Find $\\dfrac{PM}{MQ}$.",
         "geo_code": "[asy] draw(unitsquare);draw((0,0)--(.4,1)^^(0,.6)--(1,.2)); label(\"D\",(0,1),NW);label(\"E\",(.4,1),N);label(\"C\",(1,1),NE); label(\"P\",(0,.6),W);label(\"M\",(.25,.55),E);label(\"Q\",(1,.2),E); label(\"A\",(0,0),SW);label(\"B\",(1,0),SE); [/asy]",
         "answer": "$\\frac{5}{19}$",
         "category": "Local Relation Composition",
@@ -265,7 +265,7 @@
     },
     {
         "index": 34,
-        "problem": "In parallelogram $ABCD$ shown in the diagram, line $DP$ is drawn bisecting $BC$ at $N$ and meeting $AB$ (extended) at $P$. From vertex $C$, line $CQ$ is drawn bisecting side $AD$ at $M$ and meeting $AB$ (extended) at $Q$. Lines $DP$ and $CQ$ intersect at $O$. If the area of parallelogram $ABCD$ is \\$1$, then the area of triangle $QPO$ is equal to\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In parallelogram $ABCD$ shown in the diagram, line $DP$ is drawn bisecting $BC$ at $N$ and meeting $AB$ (extended) at $P$. From vertex $C$, line $CQ$ is drawn bisecting side $AD$ at $M$ and meeting $AB$ (extended) at $Q$. Lines $DP$ and $CQ$ intersect at $O$. If the area of parallelogram $ABCD$ is \\$1$, then the area of triangle $QPO$ is equal to",
         "geo_code": "[asy] size((400)); draw((0,0)--(5,0)--(6,3)--(1,3)--cycle); draw((6,3)--(-5,0)--(10,0)--(1,3)); label(\"A\", (0,0), S); label(\"B\", (5,0), S); label(\"C\", (6,3), NE); label(\"D\", (1,3), NW); label(\"P\", (10,0), E); label(\"Q\", (-5,0), W); label(\"M\", (.5,1.5), NW); label(\"N\", (5.65, 1.5), NE); label(\"O\", (3.4,1.75));[/asy]",
         "answer": "$\\frac{9}{8}$",
         "category": "Local Relation Composition",
@@ -273,7 +273,7 @@
     },
     {
         "index": 35,
-        "problem": "In $\\triangle ABC$ shown in the figure, $M$ is the midpoint of side $BC$, $AB = 12$, and $AC = 16$. Points $E$ and $F$ are located on $AC$ and $AB$, respectively, and lines $EF$ and $AM$ intersect at $G$. If $AE = 2AF$, then $\\dfrac{EG}{GF}$ equals\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$ shown in the figure, $M$ is the midpoint of side $BC$, $AB = 12$, and $AC = 16$. Points $E$ and $F$ are located on $AC$ and $AB$, respectively, and lines $EF$ and $AM$ intersect at $G$. If $AE = 2AF$, then $\\dfrac{EG}{GF}$ equals",
         "geo_code": "[asy] draw((0,0)--(12,0)--(14,7.75)--(0,0)); draw((0,0)--(13,3.875)); draw((5,0)--(8.75,4.84)); label(\"A\", (0,0), S); label(\"B\", (12,0), S); label(\"C\", (14,7.75), E); label(\"E\", (8.75,4.84), N); label(\"F\", (5,0), S); label(\"M\", (13,3.875), E); label(\"G\", (7,1)); [/asy]",
         "answer": "$\\frac{3}{2}$",
         "category": "Local Relation Composition",
@@ -281,7 +281,7 @@
     },
     {
         "index": 36,
-        "problem": "In the figure shown, $\\measuredangle E = 40^\\circ$ and arcs $AB$, $BC$, and $CD$ all have equal length. Find the measure of $\\measuredangle ACD$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure shown, $\\measuredangle E = 40^\\circ$ and arcs $AB$, $BC$, and $CD$ all have equal length. Find the measure of $\\measuredangle ACD$.",
         "geo_code": "[asy] size(120); path c = Circle((0, 0), 1); pair A = dir(20), B = dir(130), C = dir(240), D = dir(330); draw(c); pair F = 3(A-B) + B; pair G = 3(D-C) + C; pair E = intersectionpoints(B--F, C--G)[0]; draw(B--E--C--A); label(\"$A$\", A, NE); label(\"$B$\", B, NW); label(\"$C$\", C, SW); label(\"$D$\", D, SE); label(\"$E$\", E, E); [/asy]",
         "answer": "$15$",
         "category": "Local Relation Composition",
@@ -289,7 +289,7 @@
     },
     {
         "index": 37,
-        "problem": "Each of the three circles in the figure shown is externally tangent to the other two, and each side of the triangle is tangent to two of the circles. If each circle has radius $3$, what is the perimeter of the triangle?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Each of the three circles in the figure shown is externally tangent to the other two, and each side of the triangle is tangent to two of the circles. If each circle has radius $3$, what is the perimeter of the triangle?",
         "geo_code": "[asy] size(120); real t = 2/sqrt(3); real x = 1 + sqrt(3); pair A = t*dir(90), D = x*A; pair B = t*dir(210), E = x*B; pair C = t*dir(330), F = x*C; draw(D--E--F--cycle); draw(Circle(A, 1)); draw(Circle(B, 1)); draw(Circle(C, 1)); [/asy]",
         "answer": "$18+18\\sqrt{3}$",
         "category": "Global Abstract Integration",
@@ -297,7 +297,7 @@
     },
     {
         "index": 38,
-        "problem": "In $\triangle ABC$, $AB = 10$, $AC = 8$, and $BC = 6$. Circle $P$ is the circle with the smallest radius which passes through $C$ and is tangent to $AB$. Let $Q$ and $R$ be the points of intersection, distinct from $C$, of circle $P$ with sides $AC$ and $BC$, respectively. What is the length of segment $QR$?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\triangle ABC$, $AB = 10$, $AC = 8$, and $BC = 6$. Circle $P$ is the circle with the smallest radius which passes through $C$ and is tangent to $AB$. Let $Q$ and $R$ be the points of intersection, distinct from $C$, of circle $P$ with sides $AC$ and $BC$, respectively. What is the length of segment $QR$?",
         "geo_code": "[asy] size(100); real a=4, b=3; // import cse5; pathpen=black; pair A=(a,0), B=(0,b), C=(0,0); D(MP(\"A\",A)--MP(\"B\",B,N)--MP(\"C\",C,SW)--cycle); pair X=IP(B--A,(0,0)--(b,a)); D(CP((X+C)/2,C)); D(MP(\"R\",IP(CP((X+C)/2,C),B--C),NW)--MP(\"Q\",IP(CP((X+C)/2,C),A--C+(0.1,0)))); [/asy]",
         "answer": "$4.8$",
         "category": "Local Relation Composition",
@@ -305,7 +305,7 @@
     },
     {
         "index": 39,
-        "problem": "In the figure below, let $ABCDE$ be a regular pentagon such that $AG = 1$. Find the value of $FG + JH + CD$.\n\n\n\n\n  $Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, let $ABCDE$ be a regular pentagon such that $AG = 1$. Find the value of $FG + JH + CD$.",
         "geo_code": "[asy]\nimport cse5;pathpen=black;pointpen=black;\nsize(2inch);\npair A=dir(90), B=dir(18), C=dir(306), D=dir(234), E=dir(162);\nD(MP(\"A\",A,A)--MP(\"B\",B,B)--MP(\"C\",C,C)--MP(\"D\",D,D)--MP(\"E\",E,E)--cycle,linewidth(1.5));\nD(A--C--E--B--D--cycle);\npair F=IP(A--D,B--E), G=IP(B--E,C--A), H=IP(C--A,B--D), I=IP(D--B,E--C), J=IP(C--E,D--A);\nD(MP(\"F\",F,dir(126))--MP(\"I\",I,dir(270))--MP(\"G\",G,dir(54))--MP(\"J\",J,dir(198))--MP(\"H\",H,dir(342))--cycle);\n[/asy]",
         "answer": "$1 + \\sqrt{5}$",
         "category": "Local Relation Composition",
@@ -313,7 +313,7 @@
     },
     {
         "index": 40,
-        "problem": "The diagram below shows four regular hexagons, each with side length \\$1$ meter, attached to the sides of a square. This shape is drawn onto a thin sheet of metal and cut out. The hexagons are then folded upward along the sides of the square so that $A_1$ meets $A_2$, $B_1$ meets $B_2$, $C_1$ meets $C_2$, and $D_1$ meets $D_2$. If water is poured into the resulting dish, it fills to the height of the corner where $A_1$ and $A_2$ meet. There exist relatively prime positive integers $m$ and $n$ such that the number of cubic meters of water the dish will hold is $\\sqrt{\\frac{m}{n}}$. Find $m+n$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The diagram below shows four regular hexagons, each with side length \\$1$ meter, attached to the sides of a square. This shape is drawn onto a thin sheet of metal and cut out. The hexagons are then folded upward along the sides of the square so that $A_1$ meets $A_2$, $B_1$ meets $B_2$, $C_1$ meets $C_2$, and $D_1$ meets $D_2$. If water is poured into the resulting dish, it fills to the height of the corner where $A_1$ and $A_2$ meet. There exist relatively prime positive integers $m$ and $n$ such that the number of cubic meters of water the dish will hold is $\\sqrt{\\frac{m}{n}}$. Find $m+n$.\n\n",
         "geo_code": "[asy]\nimport graph; size(7cm); \nreal labelscalefactor = 0.5; \npen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); \npen dotstyle = black; \nreal xmin = -4.3, xmax = 14.52, ymin = -8.3, ymax = 6.3; \ndraw((0,1)--(0,0)--(1,0)--(1,1)--cycle); \ndraw((1,1)--(1,0)--(1.87,-0.5)--(2.73,0)--(2.73,1)--(1.87,1.5)--cycle); \ndraw((0,1)--(1,1)--(1.5,1.87)--(1,2.73)--(0,2.73)--(-0.5,1.87)--cycle); \ndraw((0,0)--(1,0)--(1.5,-0.87)--(1,-1.73)--(0,-1.73)--(-0.5,-0.87)--cycle); \ndraw((0,1)--(0,0)--(-0.87,-0.5)--(-1.73,0)--(-1.73,1)--(-0.87,1.5)--cycle); \n\ndraw((0,1)--(0,0)); \ndraw((0,0)--(1,0)); \ndraw((1,0)--(1,1)); \ndraw((1,1)--(0,1)); \ndraw((1,1)--(1,0)); \ndraw((1,0)--(1.87,-0.5)); \ndraw((1.87,-0.5)--(2.73,0)); \ndraw((2.73,0)--(2.73,1)); \ndraw((2.73,1)--(1.87,1.5)); \ndraw((1.87,1.5)--(1,1)); \ndraw((0,1)--(1,1)); \ndraw((1,1)--(1.5,1.87)); \ndraw((1.5,1.87)--(1,2.73)); \ndraw((1,2.73)--(0,2.73)); \ndraw((0,2.73)--(-0.5,1.87)); \ndraw((-0.5,1.87)--(0,1)); \n\ndot((1.87,-0.5),dotstyle); \nlabel(\" $C_1$ \", (1.72,-0.1), NE * labelscalefactor); \ndot((1.87,1.5),dotstyle); \nlabel(\" $B_2$ \", (1.76,1.04), NE * labelscalefactor); \ndot((1.5,1.87),dotstyle); \nlabel(\" $B_1$ \", (0.96,1.8), NE * labelscalefactor); \ndot((-0.5,1.87),dotstyle); \nlabel(\" $A_2$ \", (-0.26,1.78), NE * labelscalefactor); \ndot((-0.87,1.5),dotstyle); \nlabel(\" $A_1$ \", (-0.96,1.08), NE * labelscalefactor); \ndot((-0.87,-0.5),dotstyle); \nlabel(\" $D_2$ \", (-1.02,-0.18), NE * labelscalefactor); \ndot((-0.5,-0.87),dotstyle); \nlabel(\" $D_1$ \", (-0.22,-0.96), NE * labelscalefactor); \ndot((1.5,-0.87),dotstyle); \nlabel(\" $C_2$ \", (0.9,-0.94), NE * labelscalefactor); \nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); \n[/asy]",
         "answer": "$67$",
         "category": "Global Abstract Integration",
@@ -321,7 +321,7 @@
     },
     {
         "index": 41,
-        "problem": "In the figure below, $E$ is the midpoint of arc $ABEC$ and segment $ED$ is perpendicular to chord $BC$ at $D$. If the length of chord $AB$ is \\$5$ and the length of segment $BD$ is \\$3$, find the length of $DC$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, $E$ is the midpoint of arc $ABEC$ and segment $ED$ is perpendicular to chord $BC$ at $D$. If the length of chord $AB$ is \\$5$ and the length of segment $BD$ is \\$3$, find the length of $DC$.\n\n",
         "geo_code": "[asy]\nunitsize(1 cm);\npair A=2dir(240),B=2dir(190),C=2dir(30),E=2dir(135),D=foot(E,B,C);\ndraw(circle((0,0),2)); draw(A--B--C); draw(E--D); draw(rightanglemark(C,D,E,8));\nlabel(\" $A$ \",A,.5A); label(\" $B$ \",B,.5B); label(\" $C$ \",C,.5C); label(\" $E$ \",E,.5E); label(\" $D$ \",D,dir(-60));\n[/asy]",
         "answer": "$8$",
         "category": "Local Relation Composition",
@@ -329,7 +329,7 @@
     },
     {
         "index": 42,
-        "problem": "What is the radius of the smallest circle that can contain the symmetric figure formed by the \\$3$ unit squares shown above?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "What is the radius of the smallest circle that can contain the symmetric figure formed by the \\$3$ unit squares shown above?\n\n",
         "geo_code": "[asy]\ndraw((0,0)--(0,1)--(2,1)--(2,0)--cycle^^(.5,1)--(.5,2)--(1.5,2)--(1.5,1)--(.5,2)^^(.5,1)--(1.5,2)^^(1,2)--(1,0));\n[/asy]",
         "answer": "$\\frac{5\\sqrt{17}}{16} $",
         "category": "Global Abstract Integration",
@@ -337,7 +337,7 @@
     },
     {
         "index": 43,
-        "problem": "In the figure below, $\\triangle ABC$, $\\triangle DEF$, and $\\triangle GHI$ are overlapping equilateral triangles. Points $C$ and $F$ lie on $\\overline{BD}$, $F$ and $I$ lie on $\\overline{EG}$, and $C$ and $I$ lie on $\\overline{AH}$. Suppose $AB = 2FC$, $DE = 3FC$, and $GH = 4FC$. Given that the area of $\\triangle FCI$ is \\$3$, find the area of hexagon $ABGHDE$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, $\\triangle ABC$, $\\triangle DEF$, and $\\triangle GHI$ are overlapping equilateral triangles. Points $C$ and $F$ lie on $\\overline{BD}$, $F$ and $I$ lie on $\\overline{EG}$, and $C$ and $I$ lie on $\\overline{AH}$. Suppose $AB = 2FC$, $DE = 3FC$, and $GH = 4FC$. Given that the area of $\\triangle FCI$ is \\$3$, find the area of hexagon $ABGHDE$.\n\n",
         "geo_code": "[asy]\nsize(5cm);\npen dps = fontsize(10);\ndefaultpen(dps);\npair A,B,C,D,E,F,G,H,I;\nG=origin;\nH=(4,0);\nI=(2,2*sqrt(3));\nF=(1.5,3*sqrt(3)/2);\nC=F+(1,0);\nB=F-(1,0);\nD=C+(2,0);\nA=F+(0,sqrt(3));\nE=C+(0.5,3*sqrt(3)/2);\ndraw(A--H--G--E--D--B--cycle);\nlabel(\" $A$ \",A,N*.5);\nlabel(\" $B$ \",B,S*.5);\nlabel(\" $C$ \",C,SW*.5);\nlabel(\" $D$ \",D,S*.5);\nlabel(\" $E$ \",E,N*.5);\nlabel(\" $F$ \",F,SE*.5);\nlabel(\" $G$ \",G,S*.5);\nlabel(\" $H$ \",H,S*.5);\nlabel(\" $I$ \",I,N*2);\n[/asy]",
         "answer": "$114$",
         "category": "Global Abstract Integration",
@@ -345,7 +345,7 @@
     },
     {
         "index": 44,
-        "problem": "If the sum of the measures in degrees of angles $A$, $B$, $C$, $D$, $E$, and $F$ in the diagram above is \\$90n$, what is the value of $n$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "If the sum of the measures in degrees of angles $A$, $B$, $C$, $D$, $E$, and $F$ in the diagram above is \\$90n$, what is the value of $n$?\n\n",
         "geo_code": "[asy]\ndraw((3,-13)--(21.5,-5)--(19,-18)--(9,-18)--(10,-6)--(23,-14.5)--cycle);\nlabel(\"A\",(3,-13),W);label(\"C\",(21.5,-5),N);label(\"E\",(19,-18),E);label(\"F\",(9,-18),W);label(\"B\",(10,-6),N);label(\"D\",(23,-14.5),E);\n[/asy]",
         "answer": "$4$",
         "category": "Local Relation Composition",
@@ -353,7 +353,7 @@
     },
     {
         "index": 45,
-        "problem": "In the figure, circle $K$ has diameter $AB$. Circle $L$ is tangent to circle $K$ and to $AB$ at the center of circle $K$. Circle $M$ is tangent to circle $K$, to circle $L$, and to $AB$. What is the ratio of the area of circle $K$ to the area of circle $M$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, circle $K$ has diameter $AB$. Circle $L$ is tangent to circle $K$ and to $AB$ at the center of circle $K$. Circle $M$ is tangent to circle $K$, to circle $L$, and to $AB$. What is the ratio of the area of circle $K$ to the area of circle $M$?\n\n",
         "geo_code": "[asy]\nsize(150);\npair A=(0,0),B=(1,0),C=(0,1),D=(-1,0),E=(0,.5),F=(sqrt(2)/2,.25);\ndraw(circle(A,1)^^D--B);\ndraw(circle(E,.5)^^circle( F ,.25));\nlabel(\" $A$ \", D, W);\nlabel(\" $K$ \", A, S);\nlabel(\" $B$ \", B, dir(0));\nlabel(\" $L$ \", E, N);\nlabel(\" $M$ \",shift(-.05,.05)*F);\n[/asy]",
         "answer": "$16$",
         "category": "Local Relation Composition",
@@ -361,7 +361,7 @@
     },
     {
         "index": 46,
-        "problem": "Pentagon $ABCDE$ consists of a square $ACDE$ and an equilateral triangle $ABC$ sharing the side $\\overline{AC}$. A circle centered at $C$ has area \\$24$. The intersection of the circle and the pentagon is exactly half the area of the pentagon. Find the area of the pentagon.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Pentagon $ABCDE$ consists of a square $ACDE$ and an equilateral triangle $ABC$ sharing the side $\\overline{AC}$. A circle centered at $C$ has area \\$24$. The intersection of the circle and the pentagon is exactly half the area of the pentagon. Find the area of the pentagon.\n\n",
         "geo_code": "[asy]\nimport graph; size(4.26cm); \nreal labelscalefactor = 0.5; \npen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); \npen dotstyle = black; \nreal xmin = -1.52, xmax = 2.74, ymin = -2.18, ymax = 6.72;\ndraw((0,1)--(2,1)--(2,3)--(0,3)--cycle); \ndraw((0,3)--(2,3)--(1,4.73)--cycle); \ndraw((0,1)--(2,1)); \ndraw((2,1)--(2,3)); \ndraw((2,3)--(0,3)); \ndraw((0,3)--(0,1)); \ndraw((0,3)--(2,3)); \ndraw((2,3)--(1,4.73)); \ndraw((1,4.73)--(0,3)); \ndraw(circle((0,3), 1.44)); \nlabel(\" $C$ \",(-0.4,3.14),SE*labelscalefactor); \nlabel(\" $A$ \",(2.1,3.1),SE*labelscalefactor); \nlabel(\" $B$ \",(0.86,5.18),SE*labelscalefactor); \nlabel(\" $D$ \",(-0.28,0.88),SE*labelscalefactor); \nlabel(\" $E$ \",(2.1,0.8),SE*labelscalefactor); \nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); [/asy]",
         "answer": "$20$",
         "category": "Global Abstract Integration",
@@ -369,7 +369,7 @@
     },
     {
         "index": 47,
-        "problem": "In the figure, $AB$ and $BC$ are adjacent sides of square $ABCD$. Let $M$ be the midpoint of $AB$, and $N$ the midpoint of $BC$. The lines $AN$ and $CM$ intersect at $O$. What is the ratio of the area of $AOCD$ to the area of $ABCD$?\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, $AB$ and $BC$ are adjacent sides of square $ABCD$. Let $M$ be the midpoint of $AB$, and $N$ the midpoint of $BC$. The lines $AN$ and $CM$ intersect at $O$. What is the ratio of the area of $AOCD$ to the area of $ABCD$?",
         "geo_code": "[asy]\ndraw((0,0)--(2,0)--(2,2)--(0,2)--(0,0)--(2,1)--(2,2)--(1,0));\nlabel(\"A\", (0,0), S);\nlabel(\"B\", (2,0), S);\nlabel(\"C\", (2,2), N);\nlabel(\"D\", (0,2), N);\nlabel(\"M\", (1,0), S);\nlabel(\"N\", (2,1), E);\nlabel(\"O\", (1.2, .8));\n[/asy]",
         "answer": "$\\frac{2}{3}$",
         "category": "Local Relation Composition",
@@ -377,7 +377,7 @@
     },
     {
         "index": 48,
-        "problem": "Calculate  $\\frac{area(CDF)}{area(CEF)}$  in the figure.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Calculate  $\\frac{area(CDF)}{area(CEF)}$  in the figure.\n\n",
         "geo_code": "[asy]\nimport graph; size(5.75cm); \nreal labelscalefactor = 0.5; \npen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); \npen dotstyle = black; \nreal xmin = -2, xmax = 21, ymin = -2, ymax = 16;  \ndraw((0,0)--(20,0)); \ndraw((13.48,14.62)--(7,0)); \ndraw((0,0)--(15.93,9.12)); \ndraw((13.48,14.62)--(20,0)); \ndraw((13.48,14.62)--(0,0)); \nlabel(\"6\",(15.16,12.72),SE*labelscalefactor); \nlabel(\"10\",(18.56,5.1),SE*labelscalefactor); \nlabel(\"7\",(3.26,-0.6),SE*labelscalefactor); \nlabel(\"13\",(13.18,-0.71),SE*labelscalefactor); \nlabel(\"20\",(5.07,8.33),SE*labelscalefactor); \ndot((0,0),dotstyle); \nlabel(\" $B$ \", (-1.23,-1.48), NE * labelscalefactor); \ndot((20,0),dotstyle); \nlabel(\" $C$ \", (19.71,-1.59), NE * labelscalefactor); \ndot((7,0),dotstyle); \nlabel(\" $D$ \", (6.77,-1.64), NE * labelscalefactor); \ndot((13.48,14.62),dotstyle); \nlabel(\" $A$ \", (12.36,14.91), NE * labelscalefactor); \ndot((15.93,9.12),dotstyle); \nlabel(\" $E$ \", (16.42,9.21), NE * labelscalefactor); \ndot((9.38,5.37),dotstyle); \nlabel(\" $F$ \", (9.68,4.5), NE * labelscalefactor); \nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); \n[/asy]",
         "answer": "$\\frac{14}{15}$",
         "category": "Local Relation Composition",
@@ -385,7 +385,7 @@
     },
     {
         "index": 49,
-        "problem": "In the figure, a circle intersects the sides of an equilateral triangle at six points. Given that $AG = 2$, $GF = 13$, $FC = 1$, and $HJ = 7$, find the length of $DE$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, a circle intersects the sides of an equilateral triangle at six points. Given that $AG = 2$, $GF = 13$, $FC = 1$, and $HJ = 7$, find the length of $DE$.\n\n",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(fontsize(10));\nreal r=sqrt(22);\npair B=origin, A=16*dir(60), C=(16,0), D=(10-r,0), E=(10+r,0), F=C+1*dir(120), G=C+14*dir(120), H=13*dir(60), J=6*dir(60), O=circumcenter(G,H,J);\ndot(A^^B^^C^^D^^E^^F^^G^^H^^J);\ndraw(Circle(O, abs(O-D))^^A--B--C--cycle, linewidth(0.7));\nlabel(\" $A$ \", A, N);\nlabel(\" $B$ \", B, dir(210));\nlabel(\" $C$ \", C, dir(330));\nlabel(\" $D$ \", D, SW);\nlabel(\" $E$ \", E, SE);\nlabel(\" $F$ \", F, dir(170));\nlabel(\" $G$ \", G, dir(250));\nlabel(\" $H$ \", H, SE);\nlabel(\" $J$ \", J, dir(0));\nlabel(\"2\", A--G, dir(30));\nlabel(\"13\", F--G, dir(180+30));\nlabel(\"1\", F--C, dir(30));\nlabel(\"7\", H--J, dir(-30));[/asy]",
         "answer": "$2\\sqrt{22}$",
         "category": "Local Relation Composition",
@@ -393,7 +393,7 @@
     },
     {
         "index": 50,
-        "problem": "In the diagram below, points $A$, $B$, and $C$ are each \\$6$ units apart. Define a point $X$ to be \\emph{reachable} if there exists a path (not necessarily straight) from $A$ to $X$ with length at most \\$8$ that does not pass through the interior of segment $\\overline{BC}$. (Both $X$ and the path must lie in the plane determined by $A$, $B$, and $C$.) Let $R$ denote the set of all reachable points. What is the area of $R$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the diagram below, points $A$, $B$, and $C$ are each \\$6$ units apart. Define a point $X$ to be \\emph{reachable} if there exists a path (not necessarily straight) from $A$ to $X$ with length at most \\$8$ that does not pass through the interior of segment $\\overline{BC}$. (Both $X$ and the path must lie in the plane determined by $A$, $B$, and $C$.) Let $R$ denote the set of all reachable points. What is the area of $R$?\n\n",
         "geo_code": "[asy]\n  unitsize(40);\n  pair A = dir(90);\n  pair B = dir(210);\n  pair C = dir(330);\n  dot(A); \n  dot(B);\n  dot(C);\n  draw(B -- C);\n  label(\" $A$ \", A, N);\n  label(\" $B$ \", B, W);\n  label(\" $C$ \", C, E);\n[/asy]",
         "answer": "$56\\pi+9\\sqrt{3}$",
         "category": "Global Abstract Integration",
@@ -401,7 +401,7 @@
     },
     {
         "index": 51,
-        "problem": "A net is shown below consisting of \\$3$ squares, \\$4$ equilateral triangles, and \\$1$ regular hexagon, each with side length \\$1$. If this net is folded to create a polyhedron, what is the volume of the resulting solid?\n\nNet:\n\n\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A net is shown below consisting of \\$3$ squares, \\$4$ equilateral triangles, and \\$1$ regular hexagon, each with side length \\$1$. If this net is folded to create a polyhedron, what is the volume of the resulting solid?\n\nNet:\n\n\n\n",
         "geo_code": "[asy]\npair A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P;\nA = origin;\nB = (0,3);\nC = 3*dir(150);\nD = (0,1);\nE = (0,2);\nF = C+2*dir(30);\nG = C+dir(30);\nH = 2*dir(150);\nI = dir(150);\nJ = (1,1);\nK = J+dir(30);\nL = (1,2);\nM = F+dir(120);\nN = G+dir(120);\nO = H+dir(240);\nP = I+dir(240);\ndraw(A--B--C--cycle);\ndraw(D--E--F--G--H--I--cycle);\ndraw(D--E--L--J--cycle);\ndraw(F--G--N--M--cycle);\ndraw(H--I--P--O--cycle);\ndraw(J--K--L--cycle);\n[/asy]",
         "answer": "$\\frac{5}{3\\sqrt{2}}$",
         "category": "Global Abstract Integration",
@@ -409,7 +409,7 @@
     },
     {
         "index": 52,
-        "problem": "In the diagram, $BC$ is the diameter of a circle with $BC = \\sqrt{257}$, $BD = 1$, and $DA = 12$. Determine the length of the altitude from $A$ to $BC$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the diagram, $BC$ is the diameter of a circle with $BC = \\sqrt{257}$, $BD = 1$, and $DA = 12$. Determine the length of the altitude from $A$ to $BC$.\n\n",
         "geo_code": "[asy]\nimport cse5;\nsize(200);\npair O=(2, 0), B=(0, 0), C=(4, 0), A=(1, 3), D, E;\nD=MP(\"D\",D(IP(D(CP(O,B)),D(MP(\"A\",D(A),N)--MP(\"B\",D(B),W)))),NW);\nE=MP(\"E\",D(IP(CP(O,B),D(MP(\"C\",D(C),NE)--A),1)),NE);\nD(B--C);\n[/asy]",
         "answer": "$7.18$",
         "category": "Local Relation Composition",
@@ -417,7 +417,7 @@
     },
     {
         "index": 53,
-        "problem": "In the figure to the right, every point on circle $O'$ lies outside of circle $O$. Let $P$ and $Q$ be the intersection points of an internal common tangent and the two external common tangents. If the length of each external common tangent is \\$6$, what is the length of $PQ$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure to the right, every point on circle $O'$ lies outside of circle $O$. Let $P$ and $Q$ be the intersection points of an internal common tangent and the two external common tangents. If the length of each external common tangent is \\$6$, what is the length of $PQ$?\n\n",
         "geo_code": "[asy]\nsize(150);\ndotfactor=4;\ndraw(circle((0,0),4));\ndraw(circle((10,-6),3));\npair O,A,P,Q;\nO = (0,0);\nA = (10,-6);\nP = (-.55, -4.12);\nQ = (10.7, -2.86);\ndot(\" $O$ \", O, NE);\ndot(\" $O'$ \", A, SW);\ndot(\" $P$ \", P, SW);\ndot(\" $Q$ \", Q, NE);\ndraw((2*sqrt(2),2*sqrt(2))--(10 + 3*sqrt(2)/2, -6 + 3*sqrt(2)/2)--cycle);\ndraw((-1.68*sqrt(2),-2.302*sqrt(2))--(10 - 2.6*sqrt(2)/2, -6 - 3.4*sqrt(2)/2)--cycle);\ndraw(P--Q--cycle);\n[/asy]",
         "answer": "$6$",
         "category": "Local Relation Composition",
@@ -425,7 +425,7 @@
     },
     {
         "index": 54,
-        "problem": "In the figure below, each vertex of a unit square is connected by a line segment to the midpoint of the opposite side. Determine the area of the quadrilateral $ABCD$ formed by the intersection of these segments.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, each vertex of a unit square is connected by a line segment to the midpoint of the opposite side. Determine the area of the quadrilateral $ABCD$ formed by the intersection of these segments.\n\n",
         "geo_code": "[asy]\ndraw((0,0)--(1,0)--(1,1)--(0,1)--cycle);\ndraw((0,0)--(1,0.5));\ndraw((1,0)--(0.5,1));\ndraw((1,1)--(0,0.5));\ndraw((0,1)--(0.5,0));\nlabel(\" $A$ \",(0.21,0.6),N);\nlabel(\" $B$ \",(0.4,0.21),W);\nlabel(\" $C$ \",(0.8,0.4),S);\nlabel(\" $D$ \",(0.6,0.8),E);\n[/asy]",
         "answer": "$\\frac{1}{5}$",
         "category": "Local Relation Composition",
@@ -433,7 +433,7 @@
     },
     {
         "index": 55,
-        "problem": "The diagram below shows two parallel lines, $\\ell$ and $m$, which are \\$12$ units apart. A circle is tangent to line $\\ell$ at point $A$, and a congruent circle is tangent to line $m$ at point $B$. The two circles are also tangent to each other. If the distance between $A$ and $B$ is \\$13$, what is the radius of each circle?\n\n\n\n?Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The diagram below shows two parallel lines, $\\ell$ and $m$, which are \\$12$ units apart. A circle is tangent to line $\\ell$ at point $A$, and a congruent circle is tangent to line $m$ at point $B$. The two circles are also tangent to each other. If the distance between $A$ and $B$ is \\$13$, what is the radius of each circle?",
         "geo_code": "[asy]unitsize(7);\n  draw((-7, 0) -- (12, 0));\n  draw((-7, 12) -- (12, 12));\n  real r = 169 / 48;\n  draw(circle((0, r), r));\n  draw(circle((5, 12 - r), r));\n  pair A = (0, 0);\n  pair B = (5, 12);\n  dot(A);\n  dot(B);\n  label(\" $A$ \", A, plain.S);\n  label(\" $B$ \", B, plain.N);\n  label(\" $\\ell$ \", (12, 0), plain.E);\n  label(\" $m$ \", (12, 12), plain.E);[/asy]",
         "answer": "$\\frac{169}{48}$",
         "category": "Local Relation Composition",
@@ -441,7 +441,7 @@
     },
     {
         "index": 56,
-        "problem": "The figure below shows two congruent right triangles, each with angles \\$40^\\circ$, \\$50^\\circ$, and \\$90^\\circ$. What is the measure of the obtuse angle $\\alpha$ created by the intersection of their hypotenuses?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The figure below shows two congruent right triangles, each with angles \\$40^\\circ$, \\$50^\\circ$, and \\$90^\\circ$. What is the measure of the obtuse angle $\\alpha$ created by the intersection of their hypotenuses?\n\n",
         "geo_code": "[asy]\nimport olympiad;\n\tsize(80);\ndefaultpen(linewidth(0.8));\ndraw((0,0)--(3,0)--(0,4.25)--(0,0)^^(0,3)--(4.25,0)--(3,0)^^rightanglemark((0,3),(0,0),(3,0),10));\npair P = intersectionpoint((3,0)--(0,4.25),(0,3)--(4.25,0));\ndraw(anglemark((4.25,0),P,(0,4.25),10));\nlabel(\" $\\alpha$ \",P,2 * NE);\n[/asy]",
         "answer": "$170$",
         "category": "Local Relation Composition",
@@ -449,7 +449,7 @@
     },
     {
         "index": 57,
-        "problem": "In rectangle $ADEH$, points $B$ and $C$ divide $\\overline{AD}$ into three equal segments, and points $G$ and $F$ divide $\\overline{HE}$ into three equal parts. Additionally, $AH = AC = 2$. What is the area of quadrilateral $WXYZ$ shown in the diagram?\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In rectangle $ADEH$, points $B$ and $C$ divide $\\overline{AD}$ into three equal segments, and points $G$ and $F$ divide $\\overline{HE}$ into three equal parts. Additionally, $AH = AC = 2$. What is the area of quadrilateral $WXYZ$ shown in the diagram?",
         "geo_code": "[asy]defaultpen(linewidth(0.7));pointpen=black; pathpen=black;\nsize(7cm);\npair A,B,C,D,E,F,G,H,W,X,Y,Z;\nA=(0,2); B=(1,2); C=(2,2); D=(3,2);\nH=(0,0); G=(1,0); F=(2,0); E=(3,0);\nD('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,NE); D('F',F,NE); D('G',G,NW); D('H',H,NW);\nD(A--F); D(B--E); D(D--G); D(C--H);\nZ=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H);\nD('W',W,N); D('X',X,plain.E); D('Y',Y,S); D('Z',Z,plain.W);\nD(A--D--E--H--cycle);[/asy]",
         "answer": "$\\frac{1}{2}$",
         "category": "Local Relation Composition",
@@ -457,7 +457,7 @@
     },
     {
         "index": 58,
-        "problem": "In the figure, BC\u00a0\u00a0is a diameter of the circle, where  $BC=\\sqrt{901}, BD=1$ , and  $DA=16$ . If  $EC=x$ , what is the value of x?\n\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, BC\u00a0\u00a0is a diameter of the circle, where  $BC=\\sqrt{901}, BD=1$ , and  $DA=16$ . If  $EC=x$ , what is the value of x?\n\n\n",
         "geo_code": "[asy]size(2inch);\npair O,A,B,C,D,E;\nB=(0,0);\nO=(2,0);\nC=(4,0);\nD=(.333,1.333);\nA=(.75,2.67);\nE=(1.8,2);\ndraw(Arc(O,2,0,360));\ndraw(B--C--A--B);\nlabel(\" $A$ \",A,N);\nlabel(\" $B$ \",B,W);\nlabel(\" $C$ \",C,E);\nlabel(\" $D$ \",D,W);\nlabel(\" $E$ \",E,N);\nlabel(\"Figure not drawn to scale\",(2,-2.5),S);\n[/asy]",
         "answer": "$26$",
         "category": "Local Relation Composition",
@@ -465,7 +465,7 @@
     },
     {
         "index": 59,
-        "problem": "Region $ABCDEFGHIJ$ is composed of 13 congruent squares and is inscribed within rectangle $PQRS$ such that $A$ lies on $\\overline{PQ}$, $B$ on $\\overline{QR}$, $E$ on $\\overline{RS}$, and $H$ on $\\overline{SP}$, as shown in the figure to the right. If $PQ = 28$ and $QR = 26$, find the area of region $ABCDEFGHIJ$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Region $ABCDEFGHIJ$ is composed of 13 congruent squares and is inscribed within rectangle $PQRS$ such that $A$ lies on $\\overline{PQ}$, $B$ on $\\overline{QR}$, $E$ on $\\overline{RS}$, and $H$ on $\\overline{SP}$, as shown in the figure to the right. If $PQ = 28$ and $QR = 26$, find the area of region $ABCDEFGHIJ$.\n\n",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(linewidth(0.7)+fontsize(12)); pair P=(0,0), Q=(0,28), R=(26,28), S=(26,0), B=(3,28);\ndraw(P--Q--R--S--cycle);\npicture p = new picture;\ndraw(p, (0,0)--(3,0)^^(0,-1)--(3,-1)^^(0,-2)--(5,-2)^^(0,-3)--(5,-3)^^(2,-4)--(3,-4)^^(2,-5)--(3,-5));\ndraw(p, (0,0)--(0,-3)^^(1,0)--(1,-3)^^(2,0)--(2,-5)^^(3,0)--(3,-5)^^(4,-2)--(4,-3)^^(5,-2)--(5,-3));\ntransform t = shift(B) * rotate(-aSin(1/26^.5)) * scale(26^.5);\nadd(t*p);\nlabel(\" $P$ \",P,SW); label(\" $Q$ \",Q,NW); label(\" $R$ \",R,NE); label(\" $S$ \",S,SE); label(\" $A$ \",t*(0,-3),W); label(\" $B$ \",B,N); label(\" $C$ \",t*(3,0),plain.ENE); label(\" $D$ \",t*(3,-2),NE); label(\" $E$ \",t*(5,-2),plain.E); label(\" $F$ \",t*(5,-3),plain.SW); label(\" $G$ \",t*(3,-3),(0.81,-1.3)); label(\" $H$ \",t*(3,-5),plain.S); label(\" $I$ \",t*(2,-5),NW); label(\" $J$ \",t*(2,-3),SW);[/asy]",
         "answer": "$338$",
         "category": "Primitive Recognition",
@@ -473,7 +473,7 @@
     },
     {
         "index": 60,
-        "problem": "In the figure, $\\overline{CE}$ and $\\overline{DE}$ are equal chords of a circle with center $O$. The arc $AB$ represents a quarter of the circle. By what factor is the area of triangle $CED$ greater than the area of triangle $AOB$?\n\n\n\n\r $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure, $\\overline{CE}$ and $\\overline{DE}$ are equal chords of a circle with center $O$. The arc $AB$ represents a quarter of the circle. By what factor is the area of triangle $CED$ greater than the area of triangle $AOB$?",
         "geo_code": "[asy]defaultpen(linewidth(.8pt));\nunitsize(2cm);\n\npair O = origin;\npair C = (-1,0);\npair D = (1,0);\npair E = (0,1);\npair A = dir(-135);\npair B = dir(-60);\n\ndraw(Circle(O,1));\ndraw(C--E--D--cycle);\ndraw(A--O--B--cycle);\n\nlabel(\" $A$ \",A,SW);\nlabel(\" $C$ \",C,W);\nlabel(\" $E$ \",E,N);\nlabel(\" $D$ \",D,NE);\nlabel(\" $B$ \",B,SE);\nlabel(\" $O$ \",O,N);[/asy]",
         "answer": "$2$",
         "category": "Primitive Recognition",
@@ -481,7 +481,7 @@
     },
     {
         "index": 61,
-        "problem": "In the given diagram, suppose that points $A$, $B$, and $C$ are points of tangency. Find the value of $x$.\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the given diagram, suppose that points $A$, $B$, and $C$ are points of tangency. Find the value of $x$.",
         "geo_code": "[asy]unitsize(5cm);\ndefaultpen(linewidth(.8pt)+fontsize(8pt));\ndotfactor=3;\n\npair A=(-3*sqrt(3)/32,9/32), B=(3*sqrt(3)/32, 9/32), C=(0,9/16);\npair O=(0,3/8);\n\ndraw((-2/3,9/16)--(2/3,9/16));\ndraw((-2/3,1/2)--(-sqrt(3)/6,1/2)--(0,0)--(sqrt(3)/6,1/2)--(2/3,1/2));\ndraw(Circle(O,3/16));\ndraw((-2/3,0)--(2/3,0));\n\nlabel(\" $A$ \",A,SW);\nlabel(\" $B$ \",B,SE);\nlabel(\" $C$ \",C,N);\nlabel(\" $\\frac{3}{8}$ \",O);\ndraw(O+.07*dir(60)--O+3/16*dir(60),EndArrow(3));\ndraw(O+.07*dir(240)--O+3/16*dir(240),EndArrow(3));\nlabel(\" $\\frac{1}{2}$ \",(.5,.25));\ndraw((.5,.33)--(.5,.5),EndArrow(3));\ndraw((.5,.17)--(.5,0),EndArrow(3));\nlabel(\" $x$ \",midpoint((.5,.5)--(.5,9/16)));\ndraw((.5,5/8)--(.5,9/16),EndArrow(3));\nlabel(\" $60^{\\circ}$ \",(0.01,0.12));\ndot(A);\ndot(B);\ndot(C);[/asy]",
         "answer": "$\\frac{1}{16}$",
         "category": "Local Relation Composition",
@@ -489,7 +489,7 @@
     },
     {
         "index": 62,
-        "problem": "Unit square $ABCD$ is divided into four rectangles by lines $EF$ and $GH$, where $EF$ is parallel to $AB$ and $GH$ is parallel to $BC$. Given that $BF = \\frac{1}{4}$ and point $P$ is the intersection of $EF$ and $GH$, suppose $BF + DH = FH$. Find the nearest integer to the measure, in degrees, of angle $\\angle FAH$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Unit square $ABCD$ is divided into four rectangles by lines $EF$ and $GH$, where $EF$ is parallel to $AB$ and $GH$ is parallel to $BC$. Given that $BF = \\frac{1}{4}$ and point $P$ is the intersection of $EF$ and $GH$, suppose $BF + DH = FH$. Find the nearest integer to the measure, in degrees, of angle $\\angle FAH$.\n\n",
         "geo_code": "[asy]\nsize(100); defaultpen(linewidth(0.7)+fontsize(10)); \npair D2(pair P) {\ndot(P,linewidth(3)); return P;\n}\npair A=(0,1), B=(0,0), C=(1,0), D=(1,1), F=intersectionpoints(A--A+2*dir(-76),B--C)[0], H=intersectionpoints(A--A+2*dir(-76+55),D--C)[0], E=F+(0,1), G=H-(1,0), P=intersectionpoints(E--F,G--H)[0];\ndraw(A--B--C--D--cycle);\ndraw(F--A--H); draw(E--F); draw(G--H); \nlabel(\" $A$ \",D2(A),NW);\nlabel(\" $B$ \",D2(B),SW);\nlabel(\" $C$ \",D2(C),SE);\nlabel(\" $D$ \",D2(D),NE);\nlabel(\" $E$ \",D2(E),plain.N);\nlabel(\" $F$ \",D2(F),S);\nlabel(\" $G$ \",D2(G),W);\nlabel(\" $H$ \",D2(H),plain.E);\nlabel(\" $P$ \",D2(P),SE);\n[/asy]",
         "answer": "$45$",
         "category": "Primitive Recognition",
@@ -497,7 +497,7 @@
     },
     {
         "index": 63,
-        "problem": "In the figure below, square $ABDE$ is shown along with certain angles and lengths. The length $\\overline{CF}$ can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are integers, and $b$ is not divisible by the square of any integer greater than \\$1$. Find the value of $a + b$.\n\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, square $ABDE$ is shown along with certain angles and lengths. The length $\\overline{CF}$ can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are integers, and $b$ is not divisible by the square of any integer greater than \\$1$. Find the value of $a + b$.\n\n\n",
         "geo_code": "[asy]\nmarkscalefactor=0.15;\nsize(8cm);\npair A = (0,0);\npair B = (17,0);\npair E = (0,17);\npair D = (17,17);\npair F = (-120/17,225/17);\npair C = (17+120/17, 64/17);\ndraw(A--B--D--E--cycle^^E--F--A--cycle^^D--C--B--cycle);  \nlabel(\" $A$ \", A, S);\nlabel(\" $B$ \", B, S);\nlabel(\" $C$ \", C, dir(0));\nlabel(\" $D$ \", D, N);\nlabel(\" $E$ \", E, N);\nlabel(\" $F$ \", F, W);\nlabel(\" $8$ \", (F+E)/2, NW);\nlabel(\" $15$ \", (F+A)/2, SW);\nlabel(\" $8$ \", (C+B)/2, SE);\nlabel(\" $15$ \", (D+C)/2, NE);\ndraw(rightanglemark(E,F,A));\ndraw(rightanglemark(D,C,B));\n[/asy]",
         "answer": "$25$",
         "category": "Primitive Recognition",
@@ -505,7 +505,7 @@
     },
     {
         "index": 64,
-        "problem": "In the figure below, $\\angle CAB$, $\\angle CBD$, and $\\angle CDE$ are all right angles, and the given side lengths are $AC = 3$, $BC = 5$, $BD = 12$, and $DE = 84$. The distance from point $E$ to line $AB$ can be written as a reduced fraction $\\frac{m}{n}$, where $m$ and $n$ are positive integers with no common factors. Find $m+n$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, $\\angle CAB$, $\\angle CBD$, and $\\angle CDE$ are all right angles, and the given side lengths are $AC = 3$, $BC = 5$, $BD = 12$, and $DE = 84$. The distance from point $E$ to line $AB$ can be written as a reduced fraction $\\frac{m}{n}$, where $m$ and $n$ are positive integers with no common factors. Find $m+n$.\n\n",
         "geo_code": "[asy]\nsize(300);\ndefaultpen(linewidth(0.8));\ndraw(origin--(3,0)--(0,4)--cycle^^(0,4)--(6,8)--(3,0)--(30,-4)--(6,8));\nlabel(\" $A$ \",origin,SW);\nlabel(\" $B$ \",(0,4),dir(160));\nlabel(\" $C$ \",(3,0),S);\nlabel(\" $D$ \",(6,8),dir(80));\nlabel(\" $E$ \",(30,-4),E);[/asy]",
         "answer": "$5393$",
         "category": "Local Relation Composition",
@@ -513,7 +513,7 @@
     },
     {
         "index": 65,
-        "problem": "Let $O$ be the centroid of an equilateral triangle $ABC$ with area $\\frac{1}{\\pi}$. As illustrated in the diagram below, a circle centered at $O$ intersects the triangle at points $D$, $E$, $F$, $G$, $H$, and $I$, which trisect the sides of the triangle. Find the total area of the six shaded regions.\n\n\n\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $O$ be the centroid of an equilateral triangle $ABC$ with area $\\frac{1}{\\pi}$. As illustrated in the diagram below, a circle centered at $O$ intersects the triangle at points $D$, $E$, $F$, $G$, $H$, and $I$, which trisect the sides of the triangle. Find the total area of the six shaded regions.\n\n\n\n\n",
         "geo_code": "[asy]\nunitsize(90);\npair A = dir(0);\npair B = dir(120);\npair C = dir(240);\ndraw(A -- B -- C -- cycle);\npair D = (2*A + B)/3;\npair E = (A + 2*B)/3;\npair F = (2*B + C)/3;\npair G = (B + 2*C)/3;\npair H = (2*C + A)/3;\npair I = (C + 2*A)/3;\ndraw(E -- F);\ndraw(G -- H);\ndraw(I -- D);\ndraw(D -- G);\ndraw(E -- H);\ndraw(F -- I);\npair O = (0, 0);\nreal r = 1/sqrt(3);\ndraw(circle(O, r));\nfill(O -- D -- E -- cycle, gray);\nfill(O -- F -- G -- cycle, gray);\nfill(O -- H -- I -- cycle, gray);\nfill(arc(O, r, -30, 30) -- cycle, gray);\nfill(arc(0, r, 90, 150) -- cycle, gray);\nfill(arc(0, r, 210, 270) -- cycle, gray);\nlabel(\" $A$ \", A, A);\nlabel(\" $B$ \", B, B);\nlabel(\" $C$ \", C, C);\nlabel(\" $D$ \", D, unit(D));\nlabel(\" $E$ \", E, unit(E));\nlabel(\" $F$ \", F, unit(F));\nlabel(\" $G$ \", G, unit(G));\nlabel(\" $H$ \", H, unit(H));\nlabel(\" $I$ \", I, unit(I));\nlabel(\" $O$ \", O, C);\n[/asy]",
         "answer": "$\\frac{2\\sqrt{3}}{27}$",
         "category": "Global Abstract Integration",
@@ -521,7 +521,7 @@
     },
     {
         "index": 66,
-        "problem": "In the diagram, $ABCD$ and $EFGH$ are similar rectangles. Given that $DK:KC = 3:2$, by what factor is the area of rectangle $ABCD$ greater than the area of rectangle $EFGH$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the diagram, $ABCD$ and $EFGH$ are similar rectangles. Given that $DK:KC = 3:2$, by what factor is the area of rectangle $ABCD$ greater than the area of rectangle $EFGH$?\n\n",
         "geo_code": "[asy]draw((75,0)--(0,0)--(0,50)--(75,50)--(75,0)--(55,0)--(55,20)--(100,20)--(100,0)--cycle);\ndraw((55,5)--(60,5)--(60,0));\ndraw((75,5)--(80,5)--(80,0));\nlabel(\"A\",(0,50),NW);\nlabel(\"B\",(0,0),SW);\nlabel(\"C\",(75,0),SE);\nlabel(\"D\",(75,50),NE);\nlabel(\"E\",(55,20),NW);\nlabel(\"F\",(55,0),SW);\nlabel(\"G\",(100,0),SE);\nlabel(\"H\",(100,20),NE);\nlabel(\"K\",(75,20),NE);[/asy]",
         "answer": "$6.25$",
         "category": "Primitive Recognition",
@@ -529,7 +529,7 @@
     },
     {
         "index": 67,
-        "problem": "In the figure below, square $ABCD$ with side length \\$23$ is divided into nine rectangles by two lines parallel to $\\overline{AB}$ and two lines parallel to $\\overline{BC}$. The areas of four of these rectangles are given in the diagram. Determine the maximum possible area of the central rectangle.\n\n\n\n\n\n*Proposed by Lewis Chen*Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, square $ABCD$ with side length \\$23$ is divided into nine rectangles by two lines parallel to $\\overline{AB}$ and two lines parallel to $\\overline{BC}$. The areas of four of these rectangles are given in the diagram. Determine the maximum possible area of the central rectangle.",
         "geo_code": "[asy]\nsize(250);\n defaultpen (linewidth (0.7) + fontsize (10));\n\t\t draw ((0,0)--(23,0)--(23,23)--(0,23)--cycle);\n\t\t label(\" $A$ \", (0,23), NW);\n\t\t label(\" $B$ \", (23, 23), NE);\n\t\t label(\" $C$ \", (23,0), SE);\n\t\t label(\" $D$ \", (0,0), SW);\n\t\t draw((0,6)--(23,6));\n\t\t draw((0,19)--(23,19));\n\t\t draw((5,0)--(5,23));\n\t\t draw((12,0)--(12,23));\n\t\t label(\"13\", (17/2, 21));\n\t\t label(\"111\",(35/2,25/2));\n\t\t label(\"37\",(17/2,3));\n\t\t label(\"123\",(2.5,12.5));[/asy]",
         "answer": "$180$",
         "category": "Local Relation Composition",
@@ -537,7 +537,7 @@
     },
     {
         "index": 68,
-        "problem": "In the diagram below, the regular hexagon $BCEGHJ$ is inscribed within rectangle $ADFI$. Let $\\theta$ denote the acute angle between side $\\overline{EG}$ of the hexagon and the diagonal $\\overline{AF}$ of the rectangle. Suppose that $\\sin^2 \\theta = \\frac{m}{n}$, where $m$ and $n$ are positive integers with no common factors. Find the value of $m+n$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the diagram below, the regular hexagon $BCEGHJ$ is inscribed within rectangle $ADFI$. Let $\\theta$ denote the acute angle between side $\\overline{EG}$ of the hexagon and the diagonal $\\overline{AF}$ of the rectangle. Suppose that $\\sin^2 \\theta = \\frac{m}{n}$, where $m$ and $n$ are positive integers with no common factors. Find the value of $m+n$.\n\n",
         "geo_code": "[asy]\nimport graph; size(3.2cm); \nreal labelscalefactor = 0.5; \npen dps = linewidth(0.7) + fontsize(10); defaultpen(dps);\ndraw((-1,3)--(-1,2)--(-0.13,1.5)--(0.73,2)--(0.73,3)--(-0.13,3.5)--cycle); \ndraw((-1,3)--(-1,2)); \ndraw((-1,2)--(-0.13,1.5)); \ndraw((-0.13,1.5)--(0.73,2)); \ndraw((0.73,2)--(0.73,3)); \ndraw((0.73,3)--(-0.13,3.5)); \ndraw((-0.13,3.5)--(-1,3)); \ndraw((-1,3.5)--(0.73,3.5)); \ndraw((0.73,3.5)--(0.73,1.5)); \ndraw((-1,1.5)--(0.73,1.5)); \ndraw((-1,3.5)--(-1,1.5)); \nlabel(\" $ A $ \",(-1.4,3.9),SE*labelscalefactor); \nlabel(\" $ B $ \",(-1.4,3.28),SE*labelscalefactor); \nlabel(\" $ C $ \",(-1.4,2.29),SE*labelscalefactor); \nlabel(\" $ D $ \",(-1.4,1.45),SE*labelscalefactor); \nlabel(\" $ E $ \",(-0.3,1.4),SE*labelscalefactor); \nlabel(\" $ F $ \",(0.8,1.45),SE*labelscalefactor); \nlabel(\" $ G $ \",(0.8,2.24),SE*labelscalefactor); \nlabel(\" $ H $ \",(0.8,3.26),SE*labelscalefactor); \nlabel(\" $ I $ \",(0.8,3.9),SE*labelscalefactor); \nlabel(\" $ J $ \",(-0.25,3.9),SE*labelscalefactor); [/asy]",
         "answer": "$55$",
         "category": "Primitive Recognition",
@@ -545,7 +545,7 @@
     },
     {
         "index": 69,
-        "problem": "Let $ABC$ be an isosceles triangle with side lengths $AB = AC = 10\\sqrt{2}$ and $BC = 10\\sqrt{3}$. Semicircles $P$, $Q$, and $R$ are constructed with diameters $AB$, $AC$, and $BC$, respectively, so that the plane of each semicircle is perpendicular to the plane of $ABC$ and all semicircles are positioned on the same side of the plane $ABC$, as illustrated. There is a plane located above triangle $ABC$ that is tangent to each of the semicircles $P$, $Q$, and $R$ at points $D$, $E$, and $F$, respectively. Find the area of triangle $DEF$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $ABC$ be an isosceles triangle with side lengths $AB = AC = 10\\sqrt{2}$ and $BC = 10\\sqrt{3}$. Semicircles $P$, $Q$, and $R$ are constructed with diameters $AB$, $AC$, and $BC$, respectively, so that the plane of each semicircle is perpendicular to the plane of $ABC$ and all semicircles are positioned on the same side of the plane $ABC$, as illustrated. There is a plane located above triangle $ABC$ that is tangent to each of the semicircles $P$, $Q$, and $R$ at points $D$, $E$, and $F$, respectively. Find the area of triangle $DEF$.\n\n",
         "geo_code": "[asy]\nsize(200);\nimport three; defaultpen(linewidth(0.7)+fontsize(10)); currentprojection = orthographic(0,4,2.5); \n// 1.15 x-scale distortion factor \ntriple A = (0,0,0), B = (75^.5/1.15,-125^.5,0), C = (-75^.5/1.15,-125^.5,0), D = (A+B)/2 + (0,0,abs((B-A)/2)), E = (A+C)/2 + (0,0,abs((C-A)/2)), F = (C+B)/2 + (0,0,abs((B-C)/2)); \ndraw(D--E--F--cycle); draw(B--A--C); \nreal r = 1.38; draw(B--(r*B+C)/(1+r)^^(B+r*C)/(1+r)--C,linetype(\"4 4\")); draw((B+r*C)/(1+r)--(r*B+C)/(1+r));\ndraw(arc((A+B)/2,A,D)); draw(arc((A+B)/2,D,B)); draw(arc((A+C)/2,E,A)); draw(arc((A+C)/2,E,C)); draw(arc((C+B)/2,F,B)); draw(arc((C+B)/2,F,C)); \nlabel(\" $A$ \",A,S); label(\" $B$ \",B,W); label(\" $C$ \",C,plain.E);\nlabel(\" $D$ \",D,SW); label(\" $E$ \",E,SE); label(\" $F$ \",F,N);[/asy]",
         "answer": "$24$",
         "category": "Global Abstract Integration",
@@ -553,7 +553,7 @@
     },
     {
         "index": 70,
-        "problem": "In the figure below, there are two congruent circles with centers $A$ and $B$, which are tangent to each other. A third circle is tangent to the circle centered at $A$ at point $C$, and passes through point $B$. Points $C$, $A$, and $B$ lie on a straight line. The line segment $\\overline{CDEFG}$ passes through the circles at the labeled points. Given that $DE = 6$ and $FG = 9$, determine the length $AG$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the figure below, there are two congruent circles with centers $A$ and $B$, which are tangent to each other. A third circle is tangent to the circle centered at $A$ at point $C$, and passes through point $B$. Points $C$, $A$, and $B$ lie on a straight line. The line segment $\\overline{CDEFG}$ passes through the circles at the labeled points. Given that $DE = 6$ and $FG = 9$, determine the length $AG$.\n\n",
         "geo_code": "[asy]\nunitsize(5);\npair A = (-9 sqrt(3), 0);\npair B = (9 sqrt(3), 0);\npair C = (-18 sqrt(3), 0);\npair D = (-4 sqrt(3) / 3, 10 sqrt(6) / 3);\npair E = (2 sqrt(3), 4 sqrt(6));\npair F = (7 sqrt(3), 5 sqrt(6));\npair G = (12 sqrt(3), 6 sqrt(6));\nreal r = 9sqrt(3);\ndraw(circle(A, r));\ndraw(circle(B, r));\ndraw(circle((B + C) / 2, 3r / 2));\ndraw(C -- D);\ndraw(\" $6$ \", E -- D);\ndraw(E -- F);\ndraw(\" $9$ \", F -- G);\ndot(A);\ndot(B);\nlabel(\" $A$ \", A, plain.E);\nlabel(\" $B$ \", B, plain.E);\nlabel(\" $C$ \", C, W);\nlabel(\" $D$ \", D, dir(160));\nlabel(\" $E$ \", E, S);\nlabel(\" $F$ \", F, SSW);\nlabel(\" $G$ \", G, N);\n[/asy]",
         "answer": "$9\\sqrt{19}$",
         "category": "Local Relation Composition",
@@ -561,7 +561,7 @@
     },
     {
         "index": 71,
-        "problem": "A large kite is wrapped in gold foil, which is cut from a rectangular sheet that exactly covers the entire grid. How many square inches of foil are trimmed from the four corners as waste?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A large kite is wrapped in gold foil, which is cut from a rectangular sheet that exactly covers the entire grid. How many square inches of foil are trimmed from the four corners as waste?\n\n",
         "geo_code": "[asy]\nfor (int a = 0; a < 7; ++a)\n{\nfor (int b = 0; b < 8; ++b)\n{\ndot((a,b));\n}\n}\ndraw((3,0)--(0,5)--(3,7)--(6,5)--cycle);[/asy]",
         "answer": "$189$",
         "category": "Local Relation Composition",
@@ -569,7 +569,7 @@
     },
     {
         "index": 72,
-        "problem": "A rubber band is stretched around two cylindrical pipes, one with a radius of \\$3$ inches and the other with a radius of \\$9$ inches, as illustrated. The length of the rubber band can be expressed as $a\\pi + b\\sqrt{c}$, where $a$, $b$, and $c$ are integers and $c$ is square-free. Find the value of $a+b+c$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A rubber band is stretched around two cylindrical pipes, one with a radius of \\$3$ inches and the other with a radius of \\$9$ inches, as illustrated. The length of the rubber band can be expressed as $a\\pi + b\\sqrt{c}$, where $a$, $b$, and $c$ are integers and $c$ is square-free. Find the value of $a+b+c$.\n\n",
         "geo_code": "[asy]\nsize(4cm);\ndraw(circle((0,0),3));\ndraw(circle((12,0),9));\ndraw(3*dir(120)--(12,0)+9*dir(120));\ndraw(3*dir(240)--(12,0)+9*dir(240));\n[/asy]",
         "answer": "$29$",
         "category": "Primitive Recognition",
@@ -577,7 +577,7 @@
     },
     {
         "index": 73,
-        "problem": "A trapezoid has parallel sides of lengths \\$3$ and \\$9$, and non-parallel sides of lengths \\$4$ and \\$6$. A line parallel to the bases divides the original trapezoid into two smaller trapezoids with equal perimeters. In what integer ratio does this line divide each of the non-parallel sides?\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A trapezoid has parallel sides of lengths \\$3$ and \\$9$, and non-parallel sides of lengths \\$4$ and \\$6$. A line parallel to the bases divides the original trapezoid into two smaller trapezoids with equal perimeters. In what integer ratio does this line divide each of the non-parallel sides?",
         "geo_code": "[asy]defaultpen(linewidth(.8pt));\nunitsize(2cm);\n\npair A = origin;\npair B = (2.25,0);\npair C = (2,1);\npair D = (1,1);\npair E = waypoint(A--D,0.25);\npair F = waypoint(B--C,0.25);\n\ndraw(A--B--C--D--cycle);\ndraw(E--F);\n\nlabel(\"6\",midpoint(A--D),NW);\nlabel(\"3\",midpoint(C--D),N);\nlabel(\"4\",midpoint(C--B),NE);\nlabel(\"9\",midpoint(A--B),S);[/asy]",
         "answer": "$4$",
         "category": "Primitive Recognition",
@@ -585,7 +585,7 @@
     },
     {
         "index": 74,
-        "problem": "A semicircle has a diameter of length \\$16$, and inside it there is a circle of radius \\$3$ that is tangent to both the diameter and the semicircle itself. Another, larger circle is also placed inside the semicircle such that it is tangent to the semicircle, tangent to the diameter, and tangent externally to the smaller circle. If the diameter of the larger circle can be written in the form $\\frac{n + k\\sqrt{2}}{m}$, where $m$, $n$, and $k$ are positive integers with $\\gcd(m, n) = 1$, find $m + n + k$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "A semicircle has a diameter of length \\$16$, and inside it there is a circle of radius \\$3$ that is tangent to both the diameter and the semicircle itself. Another, larger circle is also placed inside the semicircle such that it is tangent to the semicircle, tangent to the diameter, and tangent externally to the smaller circle. If the diameter of the larger circle can be written in the form $\\frac{n + k\\sqrt{2}}{m}$, where $m$, $n$, and $k$ are positive integers with $\\gcd(m, n) = 1$, find $m + n + k$.\n\n",
         "geo_code": "[asy]\nsize(200);\npair O=(0,0);\nreal R=10, r=4.7;\ndraw(arc(O,R,0,180)--cycle);\npair P=(sqrt((R-r)^2-r^2),r),Q;\ndraw(circle(P,r));\nreal a=0,b=r,c;\nfor(int k=0;k<20;++k)\n{\nc=(a+b)/2;\nQ=(-sqrt((R-c)^2-c^2),c);\nif(abs(P-Q)>c+r) a=c; else b=c;\n}\ndraw(circle(Q,c));[/asy]",
         "answer": "$361$",
         "category": "Primitive Recognition",
@@ -593,7 +593,7 @@
     },
     {
         "index": 75,
-        "problem": "In triangle $CAT$, suppose that $\\angle ACT = \\angle ATC$ and $\\angle CAT = 36^\\circ$. If $\\overline{TR}$ is the angle bisector of $\\angle ATC$, what is the measure of angle $\\angle CRT$?\n\n\n\n $Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In triangle $CAT$, suppose that $\\angle ACT = \\angle ATC$ and $\\angle CAT = 36^\\circ$. If $\\overline{TR}$ is the angle bisector of $\\angle ATC$, what is the measure of angle $\\angle CRT$?",
         "geo_code": "[asy]\npair A,C,T,R;\nC = (0,0); T = (2,0); A = (1,sqrt(5+sqrt(20))); R = (3/2 - sqrt(5)/2,1.175570);\ndraw(C--A--T--cycle);\ndraw(T--R);\nlabel(\" $A$ \",A,N);\nlabel(\" $T$ \",T,SE);\nlabel(\" $C$ \",C,SW);\nlabel(\" $R$ \",R,NW);\n[/asy]",
         "answer": "$72$",
         "category": "Primitive Recognition",
@@ -601,7 +601,7 @@
     },
     {
         "index": 76,
-        "problem": "In triangle $ABC$, suppose that $AB = AC$. If there exists a point $P$ located strictly between $A$ and $B$ such that $AP = PC = CB$, what is the value of $\\angle A$?\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In triangle $ABC$, suppose that $AB = AC$. If there exists a point $P$ located strictly between $A$ and $B$ such that $AP = PC = CB$, what is the value of $\\angle A$?",
         "geo_code": "[asy]\ndraw((0,0)--(8,0)--(4,12)--cycle);\ndraw((8,0)--(1.6,4.8));\nlabel(\"A\", (4,12), N);\nlabel(\"B\", (0,0), W);\nlabel(\"C\", (8,0), E);\nlabel(\"P\", (1.6,4.8), NW);\ndot((0,0));\ndot((4,12));\ndot((8,0));\ndot((1.6,4.8));\n[/asy]",
         "answer": "$36$",
         "category": "Primitive Recognition",
@@ -609,7 +609,7 @@
     },
     {
         "index": 77,
-        "problem": "In $\\triangle ABC$, the medians $\\overline{AD}$ and $\\overline{CE}$ meet at point $P$. If $PE = 1.5$, $PD = 2$, and $DE = 2.5$, what is the area of quadrilateral $AEDC$?\n\n\n\n $Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$, the medians $\\overline{AD}$ and $\\overline{CE}$ meet at point $P$. If $PE = 1.5$, $PD = 2$, and $DE = 2.5$, what is the area of quadrilateral $AEDC$?",
         "geo_code": "[asy]\nunitsize(75);\npathpen = black; pointpen=black;\npair A = MP(\"A\", D((0,0)), dir(200));\npair B = MP(\"B\", D((2,0)), dir(-20));\npair C = MP(\"C\", D((1/2,1)), dir(100));\npair D = MP(\"D\", D(midpoint(B--C)), dir(30));\npair E = MP(\"E\", D(midpoint(A--B)), dir(-90));\npair P = MP(\"P\", D(IP(A--D, C--E)), dir(150)*2.013);\ndraw(A--B--C--cycle);\ndraw(A--D--E--C);\n[/asy]",
         "answer": "$13.5$",
         "category": "Local Relation Composition",
@@ -617,7 +617,7 @@
     },
     {
         "index": 78,
-        "problem": "Let $G$ be the centroid of triangle $ABC$, and let $D$ be the midpoint of side $BC$. Suppose triangle $BDG$ is equilateral with each side having length \\$1$. Find the length of $BC$ in triangle $ABC$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $G$ be the centroid of triangle $ABC$, and let $D$ be the midpoint of side $BC$. Suppose triangle $BDG$ is equilateral with each side having length \\$1$. Find the length of $BC$ in triangle $ABC$.",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(fontsize(10));\nreal r=100.8933946;\npair A=sqrt(7)*dir(r), B=origin, C=(3,0), D=midpoint(B--C), E=midpoint(A--C), F=midpoint(A--B), G=centroid(A,B,C);\ndraw(A--B--C--A--D^^B--E^^C--F);\npair point=G;\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $D$ \", D, dir(point--D));\nlabel(\" $E$ \", E, dir(point--E));\nlabel(\" $F$ \", F, dir(point--F));\nlabel(\" $G$ \", G, dir(20));\nlabel(\"1\", B--G, dir(150));\nlabel(\"1\", D--G, dir(30));\nlabel(\"1\", B--D, dir(270));[/asy]",
         "answer": "$2$",
         "category": "Local Relation Composition",
@@ -625,7 +625,7 @@
     },
     {
         "index": 79,
-        "problem": "The area of trapezoid $ABCD$ is \\$164\\,\\text{cm}^2$. The height is \\$8\\,\\text{cm}$, with $AB = 10\\,\\text{cm}$ and $CD = 17\\,\\text{cm}$. Determine the length of $BC$ in centimeters.\n\n\n\n $ Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The area of trapezoid $ABCD$ is \\$164\\,\\text{cm}^2$. The height is \\$8\\,\\text{cm}$, with $AB = 10\\,\\text{cm}$ and $CD = 17\\,\\text{cm}$. Determine the length of $BC$ in centimeters.",
         "geo_code": "[asy]\nsize(4inch,2inch);\ndraw((0,0)--(31,0)--(16,8)--(6,8)--cycle);\ndraw((11,8)--(11,0), linetype(\"8 4\"));\ndraw((11,1)--(12,1)--(12,0));\nlabel(\" $A$ \", (0,0), SW);\nlabel(\" $D$ \", (31,0), SE);\nlabel(\" $B$ \", (6,8), NW);\nlabel(\" $C$ \", (16,8), NE);\nlabel(\"10\", (3,5), W);\nlabel(\"8\", (11,4), E);\nlabel(\"17\", (22.5,5), E);[/asy]",
         "answer": "$10$",
         "category": "Primitive Recognition",
@@ -633,7 +633,7 @@
     },
     {
         "index": 80,
-        "problem": "In $\\triangle ABC$, suppose that $AX = XY = YB = BC$, and $m\\angle ABC = 120^\\circ$. Find the measure of angle $BAC$.\n\n\n\n $Let's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$, suppose that $AX = XY = YB = BC$, and $m\\angle ABC = 120^\\circ$. Find the measure of angle $BAC$.",
         "geo_code": "[asy]\npair A, B, C, X, Y;\nA = origin;\nX = dir(30);\nY = X + dir(0);\nB = Y + dir(60);\nC = B + dir(330);\ndraw(A--B--C--cycle);\ndraw(X--Y--B);\nlabel(\" $A$ \",A,W);\nlabel(\" $B$ \",B,N);\nlabel(\" $C$ \",C,E);\nlabel(\" $X$ \",X,NW);\nlabel(\" $Y$ \",Y,SE);\n[/asy]",
         "answer": "$15$",
         "category": "Primitive Recognition",
@@ -641,7 +641,7 @@
     },
     {
         "index": 81,
-        "problem": "In triangle $ABC$, the cevians $AD$, $BE$, and $CF$ meet at a common point $S$. Given that $AS : DS = 3 : 2$ and $BS : ES = 4 : 3$. By what factor is $CS$ greater than $FS$?\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In triangle $ABC$, the cevians $AD$, $BE$, and $CF$ meet at a common point $S$. Given that $AS : DS = 3 : 2$ and $BS : ES = 4 : 3$. By what factor is $CS$ greater than $FS$?",
         "geo_code": "[asy]\nunitsize (1 cm);\n\npair A, B, C, D, E, F, S;\n\nA = (0,0);\nB = (5,0);\nC = (1,4);\nS = (14*A + 15*B + 6*C)/35;\nD = extension(A,S,B,C);\nE = extension(B,S,C,A);\nF = extension(C,S,A,B);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\ndraw(B--E);\ndraw(C--F);\n\ndot(\" $A$ \", A, SW);\ndot(\" $B$ \", B, SE);\ndot(\" $C$ \", C, N);\ndot(\" $D$ \", D, NE);\ndot(\" $E$ \", E, W);\ndot(\" $F$ \", F, dir(270));\ndot(\" $S$ \", S, NE);\n[/asy]",
         "answer": "$2.889$",
         "category": "Local Relation Composition",
@@ -649,7 +649,7 @@
     },
     {
         "index": 82,
-        "problem": "In the diagram below, $ABDE$ is a square and certain angles and segment lengths are given. Find the length of $\\overline{CF}$. \n\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the diagram below, $ABDE$ is a square and certain angles and segment lengths are given. Find the length of $\\overline{CF}$. \n\n\n",
         "geo_code": "[asy]\nmarkscalefactor=0.15;\nsize(8cm);\npair A = (0,0);\npair B = (17,0);\npair E = (0,17);\npair D = (17,17);\npair F = (-120/17,225/17);\npair C = (17+120/17, 64/17);\ndraw(A--B--D--E--cycle^^E--F--A--cycle^^D--C--B--cycle);  \nlabel(\" $A$ \", A, S);\nlabel(\" $B$ \", B, S);\nlabel(\" $C$ \", C, dir(0));\nlabel(\" $D$ \", D, N);\nlabel(\" $E$ \", E, N);\nlabel(\" $F$ \", F, W);\nlabel(\" $8$ \", (F+E)/2, NW);\nlabel(\" $15$ \", (F+A)/2, SW);\nlabel(\" $8$ \", (C+B)/2, SE);\nlabel(\" $15$ \", (D+C)/2, NE);\ndraw(rightanglemark(E,F,A));\ndraw(rightanglemark(D,C,B));\n[/asy]",
         "answer": "$23\\sqrt{2}$",
         "category": "Local Relation Composition",
@@ -657,7 +657,7 @@
     },
     {
         "index": 83,
-        "problem": "Let $G$ denote the point of intersection of the medians of triangle $ABC$ (the centroid), and let $D$ be the midpoint of side $BC$. If triangle $BDG$ is equilateral with all sides equal to \\$1$, find the length $AB$ of triangle $ABC$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $G$ denote the point of intersection of the medians of triangle $ABC$ (the centroid), and let $D$ be the midpoint of side $BC$. If triangle $BDG$ is equilateral with all sides equal to \\$1$, find the length $AB$ of triangle $ABC$.\n\n",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(fontsize(10));\nreal r=100.8933946;\npair A=sqrt(7)*dir(r), B=origin, C=(2,0), D=midpoint(B--C), E=midpoint(A--C), F=midpoint(A--B), G=centroid(A,B,C);\ndraw(A--B--C--A--D^^B--E^^C--F);\npair point=G;\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $D$ \", D, dir(point--D));\nlabel(\" $E$ \", E, dir(point--E));\nlabel(\" $F$ \", F, dir(point--F));\nlabel(\" $G$ \", G, dir(20));\nlabel(\"1\", B--G, dir(150));\nlabel(\"1\", D--G, dir(30));\nlabel(\"1\", B--D, dir(270));[/asy]",
         "answer": "$\\sqrt{7}$",
         "category": "Local Relation Composition",
@@ -665,7 +665,7 @@
     },
     {
         "index": 84,
-        "problem": "Let $G$ be the centroid of triangle $ABC$, and let $D$ be the midpoint of side $BC$. Suppose that triangle $BDG$ is equilateral with each side of length \\$1$. Find the length $CA$ in triangle $ABC$.\n\n\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $G$ be the centroid of triangle $ABC$, and let $D$ be the midpoint of side $BC$. Suppose that triangle $BDG$ is equilateral with each side of length \\$1$. Find the length $CA$ in triangle $ABC$.\n\n",
         "geo_code": "[asy]\nsize(200);\ndefaultpen(fontsize(10));\nreal r=100.8933946;\npair A=sqrt(7)*dir(r), B=origin, C=(2,0), D=midpoint(B--C), E=midpoint(A--C), F=midpoint(A--B), G=centroid(A,B,C);\ndraw(A--B--C--A--D^^B--E^^C--F);\npair point=G;\nlabel(\" $A$ \", A, dir(point--A));\nlabel(\" $B$ \", B, dir(point--B));\nlabel(\" $C$ \", C, dir(point--C));\nlabel(\" $D$ \", D, dir(point--D));\nlabel(\" $E$ \", E, dir(point--E));\nlabel(\" $F$ \", F, dir(point--F));\nlabel(\" $G$ \", G, dir(20));\nlabel(\"1\", B--G, dir(150));\nlabel(\"1\", D--G, dir(30));\nlabel(\"1\", B--D, dir(270));[/asy]",
         "answer": "$\\sqrt{13}$",
         "category": "Local Relation Composition",
@@ -673,7 +673,7 @@
     },
     {
         "index": 85,
-        "problem": "Let $A$, $B$, and $C$ be the centers of three circles, each with radius $r$ where \\$1 < r < 2$. The distance between every pair of centers is \\$2$. Define $B'$ as the intersection point of circles centered at $A$ and $C$ that lies outside the circle centered at $B$, and let $C'$ be the intersection point of circles centered at $A$ and $B$ that is outside the circle centered at $C$. Find the value of the length $B'C'$.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "Let $A$, $B$, and $C$ be the centers of three circles, each with radius $r$ where \\$1 < r < 2$. The distance between every pair of centers is \\$2$. Define $B'$ as the intersection point of circles centered at $A$ and $C$ that lies outside the circle centered at $B$, and let $C'$ be the intersection point of circles centered at $A$ and $B$ that is outside the circle centered at $C$. Find the value of the length $B'C'$.",
         "geo_code": "[asy] import cse5; pathpen=black; pointpen=black; dotfactor=3; pair A=(1,2),B=(2,0),C=(0,0); D(CR(A,1.5)); D(CR(B,1.5)); D(CR(C,1.5)); D(MP(\"$A$\",A)); D(MP(\"$B$\",B)); D(MP(\"$C$\",C)); pair[] BB,CC; CC=IPs(CR(A,1.5),CR(B,1.5)); BB=IPs(CR(A,1.5),CR(C,1.5)); D(BB[0]--CC[1]); MP(\"$B'$\",BB[0],NW);MP(\"$C'$\",CC[1],NE); [/asy]",
         "answer": "$1+\\sqrt{3(r^2-1)}$",
         "category": "Local Relation Composition",
@@ -681,7 +681,7 @@
     },
     {
         "index": 86,
-        "problem": "In $\\triangle ABC$, let $E$ denote the midpoint of $BC$ and let $D$ be a point on $AC$. Suppose $AC = 1$ and the angle measures are $\\angle BAC = 60^\\circ$, $\\angle ABC = 100^\\circ$, $\\angle ACB = 20^\\circ$, and $\\angle DEC = 80^\\circ$. Then, the sum of the area of $\\triangle ABC$ and twice the area of $\\triangle CDE$ is equal to\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In $\\triangle ABC$, let $E$ denote the midpoint of $BC$ and let $D$ be a point on $AC$. Suppose $AC = 1$ and the angle measures are $\\angle BAC = 60^\\circ$, $\\angle ABC = 100^\\circ$, $\\angle ACB = 20^\\circ$, and $\\angle DEC = 80^\\circ$. Then, the sum of the area of $\\triangle ABC$ and twice the area of $\\triangle CDE$ is equal to",
         "geo_code": "[asy] size(200); import cse5; pathpen=black; anglefontpen=black; pointpen=black; anglepen=black; dotfactor=3; pair A=(0,0),B=(0.5,0.5*sqrt(3)),C=(3,0),D=(1.7,0),EE; EE=(B+C)/2; D(MP(\"$A$\",A,W)--MP(\"$B$\",B,N)--MP(\"$C$\",C,E)--cycle); D(MP(\"$E$\",EE,N)--MP(\"$D$\",D,S)); D(D);D(EE); MA(\"80^\\circ\",8,D,EE,C,0.1); MA(\"20^\\circ\",8,EE,C,D,0.3,2,shift(1,3)*C); draw(arc(shift(-0.1,0.05)*C,0.25,100,180),arrow =ArcArrow()); MA(\"100^\\circ\",8,A,B,C,0.1,0); MA(\"60^\\circ\",8,C,A,B,0.1,0); [/asy]",
         "answer": "$\\frac{\\sqrt{3}}{8}$",
         "category": "Local Relation Composition",
@@ -689,7 +689,7 @@
     },
     {
         "index": 87,
-        "problem": "In the triangle $ABC$ shown in the adjacent diagram, the rays $AD$ and $AE$ divide $\\angle BAC$ into three equal parts. The segment lengths $BD$, $DE$, and $EC$ are \\$2$, \\$3$, and \\$6$, respectively. What is the length of the shortest side of $\\triangle ABC$? \n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "In the triangle $ABC$ shown in the adjacent diagram, the rays $AD$ and $AE$ divide $\\angle BAC$ into three equal parts. The segment lengths $BD$, $DE$, and $EC$ are \\$2$, \\$3$, and \\$6$, respectively. What is the length of the shortest side of $\\triangle ABC$? ",
         "geo_code": "[asy] defaultpen(linewidth(.8pt)); pair A = (0,11); pair B = (2,0); pair D = (4,0); pair E = (7,0); pair C = (13,0); label(\"$A$\",A,N); label(\"$B$\",B,SW); label(\"$C$\",C,SE); label(\"$D$\",D,S); label(\"$E$\",E,S); label(\"$2$\",midpoint(B--D),N); label(\"$3$\",midpoint(D--E),NW); label(\"$6$\",midpoint(E--C),NW); draw(A--B--C--cycle); draw(A--D); draw(A--E); [/asy]",
         "answer": "$2\\sqrt{10}$",
         "category": "Local Relation Composition",
@@ -697,7 +697,7 @@
     },
     {
         "index": 88,
-        "problem": "The number of square units contained in polygon $ABCDEF$ is\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The number of square units contained in polygon $ABCDEF$ is",
         "geo_code": "[asy] draw((1,9)--(6,9)--(6,0)--(2,0)--(2,4)--(1,4)--cycle); label(\"A\",(1,9),NW); label(\"B\",(6,9),NE); label(\"C\",(6,0),SE); label(\"D\",(2,0),SW); label(\"E\",(2,4),NE); label(\"F\",(1,4),SW); label(\"6\",(3,9),N); label(\"9\",(6,4.5),E); label(\"4\",(4,0),S); label(\"5\",(1,6.5),W); [/asy]",
         "answer": "$46$",
         "category": "Local Relation Composition",
@@ -705,7 +705,7 @@
     },
     {
         "index": 89,
-        "problem": "The diagonal $DB$ of the rectangle $ABCD$ is divided into three segments of length \\$1$ each by two lines, $L$ and $L'$. These lines are perpendicular to $DB$ and pass through the vertices $A$ and $C$, respectively. Find the area of $ABCD$, rounded to one decimal place.\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The diagonal $DB$ of the rectangle $ABCD$ is divided into three segments of length \\$1$ each by two lines, $L$ and $L'$. These lines are perpendicular to $DB$ and pass through the vertices $A$ and $C$, respectively. Find the area of $ABCD$, rounded to one decimal place.",
         "geo_code": "[asy] defaultpen(linewidth(0.7)+fontsize(10)); real x=sqrt(6), y=sqrt(3), a=0.4; pair D=origin, A=(0,y), B=(x,y), C=(x,0), E=foot(C,B,D), F=foot(A,B,D); real r=degrees(B); pair M1=F+3*dir(r)*dir(90), M2=F+3*dir(r)*dir(-90), N1=E+3*dir(r)*dir(90), N2=E+3*dir(r)*dir(-90); markscalefactor=0.02; draw(B--C--D--A--B--D^^M1--M2^^N1--N2^^rightanglemark(A,F,B)^^rightanglemark(N1,E,B)); pair W=A+a*dir(135), X=B+a*dir(45), Y=C+a*dir(-45), Z=D+a*dir(-135); label(\"A\", A, NE); label(\"B\", B, NE); label(\"C\", C, dir(0)); label(\"D\", D, dir(180)); label(\"$L$\", (x/2,0), SW); label(\"$L^\\prime$\", C, SW); label(\"1\", D--F, NW); label(\"1\", F--E, SE); label(\"1\", E--B, SE); clip(W--X--Y--Z--cycle);[/asy]",
         "answer": "$4.2$",
         "category": "Local Relation Composition",
@@ -713,7 +713,7 @@
     },
     {
         "index": 90,
-        "problem": "What is the perimeter of the polygon ?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "What is the perimeter of the polygon ?",
         "geo_code": "[asy] size(4cm); draw((0,0)--(0,6)--(7,6)--(7,3)--(2.7,3)--(2.7,0)--cycle); label(\"$6$\",(0,3),W); label(\"$8$\",(4,6),N); draw((0.5,0)--(0.5,0.5)--(0,0.5)); draw((0.5,6)--(0.5,5.5)--(0,5.5)); draw((6.5,6)--(6.5,5.5)--(7,5.5)); draw((6.5,3)--(6.5,3.5)--(7,3.5)); draw((2.2,0)--(2.2,0.5)--(2.7,0.5)); draw((2.7,2.5)--(3.2,2.5)--(3.2,3)) [/asy]",
         "answer": "$28$",
         "category": "Local Relation Composition",
@@ -721,7 +721,7 @@
     },
     {
         "index": 91,
-        "problem": "The area of the rectangular region is \n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "The area of the rectangular region is ",
         "geo_code": "[asy] size(4cm);draw((0,0)--(8,0)--(8,4)--(0,4)--cycle,linewidth(.5 mm)); label(\"2\",(8,2),E); label(\"4\",(4,0),S); [/asy]",
         "answer": "$8$",
         "category": "Primitive Recognition",
@@ -729,7 +729,7 @@
     },
     {
         "index": 92,
-        "problem": "What is area of the  shaded rectangular region?\n\nLet's think step by step and output the final answer within \\boxed{}.",
+        "problem": "What is area of the  shaded rectangular region?",
         "geo_code": "[asy] draw((0,0)--(18,0)--(18,12)--(0,12)--cycle); draw((0,6)--(18,6)); for(int a=6; a<12; ++a) { draw((1.5a,0)--(1.5a,6)); } fill((15,0)--(18,0)--(18,6)--(15,6)--cycle,black); label(\"0\",(0,0),W); label(\"9\",(9,0),S); label(\"18\",(18,0),S); label(\"6\",(0,6),W); label(\"12\",(0,12),W); [/asy]",
         "answer": "$18$",
         "category": "Primitive Recognition",
