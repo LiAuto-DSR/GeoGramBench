@@ -32,6 +32,7 @@ class TestDataset(enum.Enum):
     MATH = 'MATH'  # Math 500 problems
     MINERVA = 'MINERVA'  # Minerva dataset
     OLYMPIAD_BENCH = 'OLYMPIAD_BENCH'  # Olympiad benchmark problems
+    GEOGRAMBENCH = 'GEOGRAMBENCH'  # Geogram benchmark problems
 
 """Type alias for either training or testing dataset types."""
 Dataset = Union[TrainDataset, TestDataset]
