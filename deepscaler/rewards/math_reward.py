@@ -33,11 +33,12 @@ class RewardMathFn(RewardFn):
         model_response = input.model_response
         
         # Extract solution.
-        if THOUGHT_DELIMITER_START in model_response and THOUGHT_DELIMITER_END in model_response:
-            model_solution = model_response.split(THOUGHT_DELIMITER_END)[1]
-        else:
-            return RewardOutput(reward=self.config.format_error_reward, is_correct=False)
+        #if THOUGHT_DELIMITER_START in model_response and THOUGHT_DELIMITER_END in model_response:
+        #    model_solution = model_response.split(THOUGHT_DELIMITER_END)[1]
+        #else:
+        #    return RewardOutput(reward=self.config.format_error_reward, is_correct=False)
         
+        model_solution = model_response
         model_answer = extract_answer(model_solution)
         if model_answer is None:
             return RewardOutput(reward=self.config.format_error_reward, is_correct=False)
