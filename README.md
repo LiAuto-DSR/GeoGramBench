@@ -53,7 +53,7 @@ pip install -e ./verl
 pip install -e .
 ```
 ### Data
-Our raw testing data in `deepscaler/data/test/GeoGramBench.json`. Following the preprocessing scripts in `scripts/data/deepscaler_dataset.py`, we convert the raw data into parquet file for directly evaluating. The evaluation parquet data is in `data/GeoGramBench.parquet`.
+Our raw testing data is in `deepscaler/data/test/geogrambench.json`. Following the preprocessing scripts in `scripts/data/deepscaler_dataset.py`, we convert the raw data into a Parquet file for direct evaluation. The evaluation Parquet data is located in `data/geogrambench.parquet`.
 ```python
 # Output parquet files in data/*.parquet.
 python scripts/data/deepscaler_dataset.py
@@ -69,7 +69,7 @@ OUTPUT_DIR=[OUTPUT_DIR]
 ##----------
 export VLLM_ATTENTION_BACKEND=XFORMERS
 
-DATATYPES=("GeoGramBench")
+DATATYPES=("geogrambench")
 
 length=${#DATATYPES[@]}
 for ((i=0; i<length; i++)); do
