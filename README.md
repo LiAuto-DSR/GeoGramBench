@@ -102,7 +102,8 @@ We evaluate a total of 17 mainstream large language models (LLMs), spanning both
 | GPT-4o | 39.81 | 21.29 | 4.96 | 21.40 |
 | Gemini-Pro-1.5 | 49.26 | 31.79 | 15.92 | 31.64 |
 | <strong>Open-source Models</strong> |
-| DeepSeek-R1 | <strong>85.66</strong> | <strong>75.27</strong> | <strong>40.38</strong> | <strong>69.17</strong> |
+| Qwen3-235B-Thinking-2507| <strong>89.09</strong> | <strong>79.12</strong> | <strong>49.05</strong> | <strong>74.00</strong> |
+| DeepSeek-R1 | 85.66 | 75.27 | 40.38 | 69.17 |
 | DeepSeek-v3-0324 | 80.57 | 68.89 | 27.67 | 62.05 |
 | QwQ-32B | 85.17 | 73.12 | 37.92 | 67.20 |
 | DeepSeek-R1-Distill-Qwen-32B | 79.78 | 67.83 | 35.92 | 62.68 |
