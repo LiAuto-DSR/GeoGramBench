@@ -1,6 +1,6 @@
 <div align="center">
 
-# GeoGramBench
+# GeoGramBench [ICLR2026]
 
 <div>
 GeoGramBench: Benchmarking the Geometric Program Reasoning  in Modern LLMs
