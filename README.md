@@ -114,3 +114,16 @@ We evaluate a total of 17 mainstream large language models (LLMs), spanning both
 | Sky-T1-mini-7B | 71.45 | 57.75 | 24.79 | 52.70 |
 | DeepSeek-R1-Distill-Qwen-1.5B | 60.29 | 39.02 | 11.03 | 36.70 |
 | DeepScaleR-1.5B-preview | 65.44 | 47.89 | 15.76 | 43.83 |
+
+## Citation
+
+If you use GeoGramBench in your research, please cite:
+
+```bibtex
+@article{luo2025geogrambench,
+  title={Geogrambench: Benchmarking the geometric program reasoning in modern llms},
+  author={Luo, Shixian and Zhu, Zezhou and Yuan, Yu and Yang, Yuncheng and Shan, Lianlei and Wu, Yong},
+  journal={arXiv preprint arXiv:2505.17653},
+  year={2025}
+}
+```
